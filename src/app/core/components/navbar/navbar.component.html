@@ -1,0 +1,73 @@
+<!-- Navbar -->
+<nav
+  class="fixed top-0 left-0 h-16 w-full text-white flex items-center justify-between px-4 lg:h-full lg:w-28 lg:flex-col lg:items-center lg:justify-items-center lg:py-6 lg:space-y-6 bg-white/5 dark:bg-black/30 backdrop-blur-md z-50 transition-all duration-300">
+  <!-- Botón de menú hamburguesa en móviles -->
+  <button (click)="toggleMenu()" class="lg:hidden text-gray-500 dark:text-yellow-500 text-2xl">
+    <fa-icon [icon]="menuAbierto ? iconTimes : iconBars"></fa-icon>
+  </button>
+
+  <!-- Logo o título (oculto en móviles) -->
+  <div class="hidden lg:flex">
+    <img src="assets/images/logo.png" alt="Programming" class="lg:w-14 lg:h-14 rounded-full p-1 border-2 border-white">
+  </div>
+
+  <!-- Línea separadora -->
+  <div class="w-10 border-t border-gray-500 hidden lg:block" *ngIf="!menuAbierto "></div>
+
+  <!-- Menú de iconos -->
+  <div class="hidden lg:flex flex-col text-center space-y-6">
+    <a *ngFor="let link of menuLinks" [routerLink]="link.path" class="text-2xl md:text-3xl transition-all duration-300"
+      [ngClass]="{'text-yellow-400': isActive(link.path)}">
+      <fa-icon [icon]="link.icon"></fa-icon>
+    </a>
+  </div>
+
+  <!-- Línea separadora -->
+  <div class="w-10 border-t border-gray-500 hidden lg:block" *ngIf="!menuAbierto "></div>
+
+  <!-- Switches de idioma y modo oscuro -->
+  <div class="flex gap-4 lg:flex-col">
+    <!-- Cambio de idioma -->
+    <div class="flex items-center">
+      <button (click)="cambiarIdioma()"
+        class="relative w-16 h-7 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition-all duration-300">
+        <div
+          class="absolute left-1 flex items-center justify-center w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300"
+          [ngClass]="{'translate-x-7': idioma === 'en'}">
+          <img [src]="idioma === 'es' ? 'assets/images/es.png' : 'assets/images/en.png'" alt="Bandera"
+            class="w-5 h-5 rounded-full">
+        </div>
+        <span class="absolute left-10 text-xs font-bold text-gray-800 dark:text-white transition-opacity duration-300"
+          [ngClass]="{'opacity-100': idioma === 'es', 'opacity-0': idioma === 'en'}">ES</span>
+        <span class="absolute right-10 text-xs font-bold text-gray-800 dark:text-white transition-opacity duration-300"
+          [ngClass]="{'opacity-0': idioma === 'es', 'opacity-100': idioma === 'en'}">EN</span>
+      </button>
+    </div>
+
+    <!-- Modo oscuro -->
+    <label class="flex items-center cursor-pointer">
+      <div
+        class="relative w-16 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-all duration-300">
+        <input type="checkbox" class="sr-only peer" (change)="toggleModoOscuro()" [checked]="esModoOscuro">
+        <div
+          class="absolute left-1 flex items-center justify-center w-6 h-6 bg-white dark:bg-yellow-400 rounded-full shadow-md transition-all duration-300 transform"
+          [class.translate-x-8]="esModoOscuro">
+          <fa-icon [icon]="esModoOscuro ? iconSol : iconLuna" class="text-gray-700 dark:text-gray-900"></fa-icon>
+        </div>
+      </div>
+    </label>
+  </div>
+</nav>
+
+
+<!-- Menú lateral móvil -->
+<div
+  class="fixed top-16 left-0 text-center text-white w-20 h-screen bg-black/50 backdrop-blur-md flex flex-col items-center space-y-8 pt-20  transition-transform duration-300 lg:hidden"
+  [ngClass]="{'-translate-x-full': !menuAbierto, 'translate-x-0': menuAbierto}" (click)="cerrarMenu($event)">
+
+  <a *ngFor="let link of menuLinks" [routerLink]="link.path" class="text-3xl transition-all duration-300"
+    [ngClass]="{'text-yellow-400': isActive(link.path)}">
+    <fa-icon [icon]="link.icon"></fa-icon>
+  </a>
+
+</div>
