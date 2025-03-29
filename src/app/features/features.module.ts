@@ -6,9 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FeaturesComponent } from './features.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
+    HomeComponent,
+    AboutComponent,
     FeaturesComponent
   ],
   imports: [
@@ -16,6 +20,8 @@ import { FeaturesComponent } from './features.component';
     TranslateModule,
     FontAwesomeModule,
     RouterModule.forChild([
+      { path: 'home', component: HomeComponent },
+      { path: 'about-me', component: AboutComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ])
   ]

@@ -2,5 +2,17 @@
 {
   "footer":{
     "description": "Hecho con ❤️ por"
+  },
+  "home":{
+    "description": "Desarrollador Frontend"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "greeting": "Profesional Técnico | Desarrollador Frontend | Desarrollador Web",
+    "description1": "Soy un desarrollador apasionado por la tecnología y el diseño web. Me especializo en crear interfaces dinámicas y optimizadas, brindando experiencias fluidas y agradables a los usuarios.",
+    "description2": "Aunque mi fuerte es el frontend, también tengo conocimientos en backend y bases de datos, lo que me permite desarrollar soluciones más completas y escalables.",
+    "description3": "Siempre estoy explorando nuevas tecnologías, perfeccionando mi código y explorando formas innovadoras de crear mejores proyectos",
+    "description4": "Me motiva enfrentar nuevos desafíos y oportunidades para seguir creciendo en el mundo del desarrollo web.",
+    "download_cv": "Descargar CV"
   }
 }

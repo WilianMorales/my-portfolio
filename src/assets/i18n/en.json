@@ -1,5 +1,17 @@
 {
   "footer": {
     "description": "Made with ❤️ by"
+  },
+  "home": {
+    "description": "Frontend Developer"
+  },
+  "about": {
+    "title": "About me",
+    "greeting": "Technical Professional | Frontend Developer | Web Developer",
+    "description1": "I'm a developer passionate about technology and web design. I specialize in creating dynamic and optimized interfaces, delivering smooth and engaging user experiences.",
+    "description2": "Although my strength is frontend development, I also have knowledge of backend and databases, allowing me to build more complete and scalable solutions.",
+    "description3": "I'm always exploring new technologies, refining my code, and finding innovative ways to create better projects.",
+    "description4": "I’m driven by new challenges and opportunities to keep growing in the world of web development.",
+    "download_cv": "Download CV"
   }
 }
