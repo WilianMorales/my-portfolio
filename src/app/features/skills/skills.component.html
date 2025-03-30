@@ -14,7 +14,7 @@
 
         <div class="grid grid-cols-3 gap-6 mt-6">
           <div *ngFor="let skill of categoria.skills" class="flex flex-col items-center">
-            <div class="bg-white/10 dark:bg-gray-800/30 p-1 rounded-xl shadow-md flex flex-col items-center justify-center
+            <div class="bg-white/5 dark:bg-black/30 p-1 rounded-xl shadow-md flex flex-col items-center justify-center
             w-[90px] h-[100px]">
               <ng-container *ngIf="skill.img; else iconTemplate">
                 <img [src]="skill.img" [alt]="skill.name" class="w-12 h-12 object-contain">

@@ -3,7 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        titan: ['Titan One', 'cursive'],
+      }
+    },
   },
   plugins: [],
 }
