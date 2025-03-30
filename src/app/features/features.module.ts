@@ -8,12 +8,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FeaturesComponent } from './features.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
+    FeaturesComponent,
     HomeComponent,
     AboutComponent,
-    FeaturesComponent
+    SkillsComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forChild([
       { path: 'home', component: HomeComponent },
       { path: 'about-me', component: AboutComponent },
+      { path: 'skills', component: SkillsComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ])
   ]

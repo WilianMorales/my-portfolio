@@ -14,5 +14,9 @@
     "description3": "Siempre estoy explorando nuevas tecnologías, perfeccionando mi código y explorando formas innovadoras de crear mejores proyectos",
     "description4": "Me motiva enfrentar nuevos desafíos y oportunidades para seguir creciendo en el mundo del desarrollo web.",
     "download_cv": "Descargar CV"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "skillsTitle": "HABILIDADES TÉCNICAS"
   }
 }

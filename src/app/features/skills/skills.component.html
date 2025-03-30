@@ -1,0 +1,32 @@
+<div class="flex flex-col pt-2 md:pt-0">
+  <div class="flex-1 container mx-auto max-w-4xl px-5 py-20 lg:px-0">
+    <h1 class="text-4xl font-bold text-center text-white dark:text-yellow-500">
+      <fa-icon [icon]="iconCode" class="text-4xl mr-2"></fa-icon> {{ 'skills.title' | translate }}
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-12">
+      <!-- Categorias -->
+      <div *ngFor="let categoria of skillsCategorias">
+        <h3
+          class="text-2xl text-center font-bold text-white dark:text-yellow-500 border-b-2 border-gray-400 dark:border-yellow-600 pb-2">
+          {{ categoria.title }}
+        </h3>
+
+        <div class="grid grid-cols-3 gap-6 mt-6">
+          <div *ngFor="let skill of categoria.skills" class="flex flex-col items-center">
+            <div class="bg-white/10 dark:bg-gray-800/30 p-1 rounded-xl shadow-md flex flex-col items-center justify-center
+            w-[90px] h-[100px]">
+              <ng-container *ngIf="skill.img; else iconTemplate">
+                <img [src]="skill.img" [alt]="skill.name" class="w-12 h-12 object-contain">
+              </ng-container>
+              <ng-template #iconTemplate>
+                <fa-icon *ngIf="skill.icon" [icon]="skill.icon" [ngClass]="skill.color" class="text-5xl"></fa-icon>
+              </ng-template>
+              <p class="mt-2 text-gray-800 dark:text-gray-200 text-sm font-medium text-center whitespace-nowrap overflow-hidden text-ellipsis w-full">{{ skill.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
