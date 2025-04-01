@@ -1,32 +1,32 @@
-<div class="flex flex-col p-2 md:p-0">
-  <div class="flex-1 container mx-auto max-w-4xl px-6 lg:px-0 pt-20 pb-10 md:pb-20">
+<div class="flex items-center justify-center min-h-[calc(100vh-80px)] md:min-h-[calc(80vh-20px)] lg:min-h-[calc(100vh-80px)] pt-4 lg:pt-0 px-4 mb-8 md:mb-0">
+  <div class="flex flex-col items-center justify-center w-full max-w-5xl">
     <!-- Título -->
-    <h2 class="text-4xl font-bold text-center text-white dark:text-yellow-500">
+    <h2 class="text-4xl max-w-full font-bold text-center text-white dark:text-yellow-500 overflow-hidden text-ellipsis">
       <fa-icon [icon]="iconUser" class="text-4xl mr-2"></fa-icon> {{ 'about.title' | translate }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 mt-8 md:items-start">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:items-start">
       <!-- Imagen -->
       <div class="flex justify-center">
         <img src="assets/images/programming.svg" alt="Programming" class="w-full max-w-md h-auto object-cover">
       </div>
 
       <!-- Texto -->
-      <div class="text-left space-y-2">
-        <span class="text-base lg:text-lg text-justify font-semibold text-gray-200 dark:text-yellow-500">
+      <div class="text-left space-y-4 min-h-[400px]">
+        <span class="text-base lg:text-lg text-justify font-semibold text-gray-200 dark:text-yellow-500 overflow-hidden">
           <fa-icon [icon]="iconLaptop" size="lg" class="mr-1"></fa-icon> {{ 'about.greeting' | translate }}
         </span>
 
-        <p class="text-gray-300 dark:text-gray-300">
+        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
           {{ 'about.description1' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300">
+        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
           {{ 'about.description2' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300">
+        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
           {{ 'about.description3' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300">
+        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
           {{ 'about.description4' | translate }}
         </p>
 
