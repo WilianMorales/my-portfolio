@@ -1,0 +1,61 @@
+<div class="flex items-center justify-center min-h-[calc(100vh-80px)] md:min-h-[calc(80vh-20px)] lg:min-h-[calc(100vh-80px)] pt-4 lg:pt-0 px-4 mb-8 md:mb-0">
+  <div class="flex flex-col items-center justify-center w-full max-w-4xl">
+    <h2 class="text-4xl font-bold text-center text-gray-300 dark:text-yellow-500">
+      <fa-icon [icon]="iconResumen" class="text-4xl mr-2"></fa-icon>  {{ 'resumen.titulo' | translate }}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 mt-8 p-4 lg:p-0 md:items-start">
+      <!-- Educación (Columna izquierda) -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-400">
+          <fa-icon [icon]="iconStudy"></fa-icon> {{ 'resumen.educacion' | translate }}
+        </h3>
+        <div class="relative border-l-4 border-gray-700 dark:border-yellow-600 py-1 mt-4 ml-4">
+          <ng-container *ngFor="let item of ('resumen.timeline' | translate); let i = index">
+            <div *ngIf="item.tipo === 'educacion' || item.tipo === 'education'" class="mb-3 relative left-4">
+              <span class="absolute -left-8 w-6 h-6 rounded-full border-4 mt-0.5 border-gray-800 bg-blue-500"></span>
+              <p class="text-gray-400">
+                <span class="text-xs">{{ item.fecha }}</span>
+              </p>
+              <h4 class="text-xl font-semibold text-gray-300 dark:text-yellow-500">
+                {{ item.titulo }}
+              </h4>
+              <p class="text-sm text-gray-400 dark:text-gray-400 mt-0.5">
+                {{ item.lugar }}
+              </p>
+              <p class="text-gray-400 dark:text-gray-300 mt-2">
+                {{ item.descripcion }}
+              </p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <!-- Experiencia (Columna derecha) -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-400">
+          <fa-icon [icon]="iconBusiness"></fa-icon> {{ 'resumen.experiencia' | translate }}
+        </h3>
+        <div class="relative border-l-4 border-gray-700 dark:border-yellow-600 py-1 mt-4 ml-4">
+          <ng-container *ngFor="let item of ('resumen.timeline' | translate); let i = index">
+            <div *ngIf="item.tipo === 'experiencia' || item.tipo === 'experience'" class="mb-6 relative left-4">
+              <span class="absolute -left-8 w-6 h-6 rounded-full border-4 mt-0.5 border-gray-800 bg-yellow-600"></span>
+              <p class="text-gray-400">
+                <span class="text-xs">{{ item.fecha }}</span>
+              </p>
+              <h4 class="text-lg font-semibold text-gray-300 dark:text-yellow-500">
+                {{ item.titulo }}
+              </h4>
+              <p class="text-sm text-gray-400 dark:text-gray-300">
+                {{ item.lugar }}
+              </p>
+              <p class="text-gray-400 dark:text-gray-300 mt-2">
+                {{ item.descripcion }}
+              </p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faAngular, faHtml5, faCss3Alt, faNodeJs, faGithub, faJsSquare, faBootstrap, faTrello, faGitAlt, faSass, faBitbucket } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faHtml5, faCss3Alt, faNodeJs, faGithub, faJsSquare, faBootstrap, faTrello, faGitAlt, faSass, faBitbucket, faWordpress } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faServer } from '@fortawesome/free-solid-svg-icons';
 
 export interface Skill {
@@ -53,6 +53,7 @@ export class SkillsComponent {
         { name: 'GitHub', icon: faGithub, color: 'text-gray-700' },
         { name: 'Git', icon: faGitAlt, color: 'text-red-500' },
         { name: 'Postman', img: 'assets/images/skill/postman.svg' },
+        { name: 'WordPress', icon: faWordpress, color: 'text-white' },
         { name: 'Tello', icon: faTrello, color: 'text-blue-400' },
         { name: 'Bitbucket', icon: faBitbucket, color: 'text-blue-500' },
         { name: 'Scrum', img: 'assets/images/skill/scrum.png' }

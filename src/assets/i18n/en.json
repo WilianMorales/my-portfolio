@@ -17,5 +17,51 @@
   "skills": {
     "title": "Skills",
     "skillsTitle": "TECHNICAL SKILLS"
+  },
+  "resumen": {
+    "titulo": "Summary",
+    "educacion": "Education",
+    "experiencia": "Work Experience",
+    "timeline": [
+      {
+        "tipo": "experience",
+        "titulo": "Web Developer Jr",
+        "lugar": "Horisson Shop",
+        "fecha": "September 2024 - January 2025",
+        "descripcion": "Web Developer with experience in theme customization on WordPress, responsive design, and integration of visual elements (CSS, HTML)."
+      },
+      {
+        "tipo": "experiencia",
+        "titulo": "Freelance Developer",
+        "lugar": "Freelance",
+        "fecha": "Present",
+        "descripcion": ""
+      },
+      {
+        "tipo": "education",
+        "titulo": "Computing and Information Technology",
+        "lugar": "Cibertec",
+        "fecha": "2018 - 2020",
+        "descripcion": "Graduated with specialization in web development."
+      },
+      {
+        "tipo": "education",
+        "titulo": "Intermediate Angular Course",
+        "lugar": "Online Platform",
+        "fecha": "2021",
+        "descripcion": "Specialized course in Angular, RxJS, and best practices."
+      },
+      {
+        "tipo": "education",
+        "titulo": "Cloud Computing",
+        "lugar": "National University of Engineering",
+        "fecha": "2025",
+        "descripcion": "Cloud Computing Course Certificate: AWS - Azure - Google Cloud."
+      }
+    ]
   }
 }
+
+
+
+

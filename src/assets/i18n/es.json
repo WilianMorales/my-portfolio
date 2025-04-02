@@ -18,5 +18,47 @@
   "skills": {
     "title": "Habilidades",
     "skillsTitle": "HABILIDADES TÉCNICAS"
+  },
+  "resumen": {
+    "titulo": "Resumen",
+    "educacion": "Educación",
+    "experiencia": "Experiencia Laboral",
+    "timeline": [
+      {
+        "tipo": "experiencia",
+        "titulo": "Desarrollador Web",
+        "lugar": "Horisson Shop",
+        "fecha": "Septiembre 2024 - Enero 2025",
+        "descripcion": "Desarrollador Web con experiencia en personalización de temas en WordPress, diseño responsivo, integración de elementos visuales (CSS, HTML)."
+      },
+      {
+        "tipo": "experiencia",
+        "titulo": "Desarrollador Freelance",
+        "lugar": "Freelance",
+        "fecha": "Actualidad",
+        "descripcion": ""
+      },
+      {
+        "tipo": "educacion",
+        "titulo": "Computación e Informática",
+        "lugar": "Cibertec",
+        "fecha": "2018 - 2020",
+        "descripcion": "Egresado con especialización en desarrollo web."
+      },
+      {
+        "tipo": "educacion",
+        "titulo": "Curso Avanzado de Angular",
+        "lugar": "Plataforma Online",
+        "fecha": "2023",
+        "descripcion": "Curso especializado en Angular, RxJS y buenas prácticas."
+      },
+      {
+        "tipo": "educacion",
+        "titulo": "Cloud Computing",
+        "lugar": "Universidad Nacional de Ingeniería",
+        "fecha": "2025",
+        "descripcion": "Certificado de Curso de Cloud Computing: AWS - Azure - Google Cloud."
+      }
+    ]
   }
 }
