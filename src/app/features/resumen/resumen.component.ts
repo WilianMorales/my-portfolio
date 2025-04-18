@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { faBusinessTime, faGraduationCap, faIdCardAlt, faIdCardClip } from '@fortawesome/free-solid-svg-icons';
+import { faBusinessTime, faGraduationCap, faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-resumen',
   templateUrl: './resumen.component.html',
-  styleUrl: './resumen.component.css'
+  styles: ''
 })
 export class ResumenComponent {
   iconStudy = faGraduationCap;

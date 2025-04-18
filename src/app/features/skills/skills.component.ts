@@ -31,9 +31,9 @@ export class SkillsComponent {
         { name: 'CSS3', icon: faCss3Alt, color: 'text-blue-500' },
         { name: 'JS', icon: faJsSquare, color: 'text-yellow-500' },
         { name: 'Angular', icon: faAngular, color: 'text-red-600' },
-        { name: 'TS', img: 'assets/images/skill/typescript.png' },
+        { name: 'TS', img: 'assets/images/skill/typescript.webp' },
         { name: 'Bootstrap', icon: faBootstrap, color: 'text-purple-500' },
-        { name: 'Tailwind Css', img: 'assets/images/skill/tailwindcss.png' },
+        { name: 'Tailwind Css', img: 'assets/images/skill/tailwindcss.webp' },
         { name: 'Sass', icon: faSass, color: 'text-pink-400' },
       ]
     },
@@ -56,7 +56,7 @@ export class SkillsComponent {
         { name: 'WordPress', icon: faWordpress, color: 'text-white' },
         { name: 'Tello', icon: faTrello, color: 'text-blue-400' },
         { name: 'Bitbucket', icon: faBitbucket, color: 'text-blue-500' },
-        { name: 'Scrum', img: 'assets/images/skill/scrum.png' }
+        { name: 'Scrum', img: 'assets/images/skill/scrum.webp' }
       ]
     }
   ];

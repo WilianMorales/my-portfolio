@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faUser ,faFileArrowDown, faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFileArrowDown, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
@@ -10,4 +10,5 @@ export class AboutComponent {
   iconFileDown = faFileArrowDown;
   iconLaptop = faLaptop;
   iconUser = faUser;
+
 }

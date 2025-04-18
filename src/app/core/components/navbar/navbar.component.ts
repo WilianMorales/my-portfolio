@@ -26,7 +26,6 @@ export class NavbarComponent {
   menuLinks: Menu[] = [
     { path: '/home', icon: faHome },
     { path: '/about-me', icon: faUser },
-    { path: '/resume', icon: faIdCard },
     { path: '/skills', icon: faCode },
     { path: '/portfolio', icon: faBriefcase },
     { path: '/contact', icon: faEnvelope }

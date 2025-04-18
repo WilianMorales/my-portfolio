@@ -8,16 +8,14 @@
   <app-navbar></app-navbar>
 
   <!-- Contenedor Principal -->
-  <div class="flex-1 flex flex-col">
-    <!-- Contenedor para las páginas -->
-    <main class="mt-16 lg:mt-0 lg:ml-28 p-5 lg:p-0 flex-1 items-center justify-center">
+  <main class="flex-1 items-center justify-center pt-4 px-4 mt-16">
+    <!-- Contenedor para las páginas con un máximo de 1200px de ancho -->
+    <div class="mx-auto px-4">
+      <!-- Aquí se renderizarán los componentes -->
       <router-outlet></router-outlet>
-    </main>
-
-    <!-- Footer (solo se empuja abajo en pantallas grandes) -->
-    <app-footer class="ml-28 hidden lg:block"></app-footer>
-  </div>
+    </div>
+  </main>
 
   <!-- Footer en móviles y tablets -->
-  <app-footer class="lg:hidden"></app-footer>
+  <app-footer></app-footer>
 </div>

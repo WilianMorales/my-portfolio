@@ -1,41 +1,44 @@
-<div class="flex items-center justify-center min-h-[calc(100vh-80px)] md:min-h-[calc(80vh-20px)] lg:min-h-[calc(100vh-80px)] pt-4 lg:pt-0 px-4 mb-8 md:mb-0">
-  <div class="flex flex-col items-center justify-center w-full max-w-5xl">
+<div class="contenedor flex flex-col items-center justify-center max-auto mb-8 lg:min-h-screen">
+  <div class="flex flex-col items-center justify-center w-full lg:max-w-screen-lg lg:min-h-[calc(100vh-120px)]">
     <!-- Título -->
-    <h2 class="text-4xl max-w-full font-bold text-center text-white dark:text-yellow-500 overflow-hidden text-ellipsis">
+    <h2
+      class="text-4xl font-bold text-center text-gray-100 dark:text-yellow-500 mb-4 transition-colors flex items-center flex-wrap justify-center gap-2">
       <fa-icon [icon]="iconUser" class="text-4xl mr-2"></fa-icon> {{ 'about.title' | translate }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:items-start">
+    <!-- Contenido principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 mb-10 w-full items-start">
       <!-- Imagen -->
       <div class="flex justify-center">
-        <img src="assets/images/programming.svg" alt="Programming" class="w-full max-w-md h-auto object-cover">
+        <img ngOptimizedImage src="assets/images/programming.svg" alt="Programming" class="w-full max-w-md h-auto object-contain">
       </div>
 
       <!-- Texto -->
-      <div class="text-left space-y-4 min-h-[400px]">
-        <span class="text-base lg:text-lg text-justify font-semibold text-gray-200 dark:text-yellow-500 overflow-hidden">
+      <div class="text-left space-y-4 min-h-[400px] break-words">
+        <span
+          class="text-base lg:text-lg text-justify font-semibold text-slate-100 dark:text-yellow-500 items-center flex-wrap gap-2">
           <fa-icon [icon]="iconLaptop" size="lg" class="mr-1"></fa-icon> {{ 'about.greeting' | translate }}
         </span>
 
-        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
+        <p class="text-sm md:text-base text-slate-300 dark:text-slate-300 leading-relaxed">
           {{ 'about.description1' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
+        <p class="text-sm md:text-base text-slate-300 dark:text-slate-300 leading-relaxed">
           {{ 'about.description2' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
+        <p class="text-sm md:text-base text-slate-300 dark:text-slate-300 leading-relaxed">
           {{ 'about.description3' | translate }}
         </p>
-        <p class="text-gray-300 dark:text-gray-300 overflow-hidden text-ellipsis">
+        <p class="text-sm md:text-base text-slate-300 dark:text-slate-300 leading-relaxed">
           {{ 'about.description4' | translate }}
         </p>
 
         <!-- Botón para descargar el CV -->
         <div class="mt-6 flex justify-center lg:justify-start">
-          <a href="assets/cv/CURRICULO_VITAL.pdf"
-            class="inline-flex items-center px-5 py-2 border border-gray-200 dark:border-yellow-600
-                    rounded-3xl text-gray-200 dark:text-gray-200 hover:bg-gray-800
-                    dark:hover:bg-yellow-600 hover:text-white dark:hover:text-gray-200 transition">
+          <a href="assets/cv/CURRICULO_VITAL.pdf" target="_blank"
+            class="inline-flex items-center px-5 py-2 border border-gray-800 bg-indigo-600 hover:bg-indigo-500 dark:bg-yellow-600
+                      rounded-3xl text-gray-200 dark:text-gray-200
+                      dark:hover:bg-yellow-600/80 hover:text-white dark:hover:text-gray-200 transition whitespace-nowrap">
             <span>{{ 'about.download_cv' | translate }}</span>
             <fa-icon [icon]="iconFileDown" class="ml-3"></fa-icon>
           </a>
@@ -43,4 +46,9 @@
       </div>
     </div>
   </div>
+
+  <div class="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
+    <app-resumen />
+  </div>
+
 </div>

@@ -7,11 +7,11 @@
   },
   "about": {
     "title": "About me",
-    "greeting": "Technical Professional | Frontend Developer | Web Developer",
-    "description1": "I'm a developer passionate about technology and web design. I specialize in creating dynamic and optimized interfaces, delivering smooth and engaging user experiences.",
-    "description2": "Although my strength is frontend development, I also have knowledge of backend and databases, allowing me to build more complete and scalable solutions.",
-    "description3": "I'm always exploring new technologies, refining my code, and finding innovative ways to create better projects.",
-    "description4": "I’m driven by new challenges and opportunities to keep growing in the world of web development.",
+    "greeting": "Technical Professional | Frontend web developer",
+    "description1": "Hi, I'm William Morales, a technician who graduated in Computing and Informatics.",
+    "description2": "My main focus is front-end development, although I also have experience in back-end and databases, which has allowed me to strengthen my knowledge in creating dynamic and functional web applications.",
+    "description3": "I'm characterized by my ability to work in a team, my problem-solving skills, adaptability to changes, creativity, and responsibility.",
+    "description4": "I’m always looking for new challenges and opportunities to continue growing in the world of web development.",
     "download_cv": "Download CV"
   },
   "skills": {
@@ -19,46 +19,90 @@
     "skillsTitle": "TECHNICAL SKILLS"
   },
   "resumen": {
-    "titulo": "Summary",
     "educacion": "Education",
-    "experiencia": "Work Experience",
-    "timeline": [
+    "experiencia": "Work Experience"
+  },
+  "work": {
+    "type": "Practices",
+    "titulo": "Frontend Developer",
+    "logo": "/assets/images/horisson.webp",
+    "lugar": "Horisson Shop",
+    "fecha": "Sep. 2024 - Jan. 2025",
+    "descripcion": "WordPress theme customization and responsive design creation."
+  },
+  "education": {
+    "tipo": "Technical",
+    "titulo": "Computing and Information",
+    "logo": "/assets/images/cibertec.webp",
+    "lugar": "CIBERTEC",
+    "fecha": "Jan. 2018 - Dec. 2020",
+    "ciudad": "Trujillo - Perú",
+    "descripcion": "Graduated with specialization in web development."
+  },
+  "certificado": {
+    "titulo": "Courses and Certifications",
+    "viewCred": "View Credential",
+    "cursos": [
       {
-        "tipo": "experience",
-        "titulo": "Web Developer Jr",
-        "lugar": "Horisson Shop",
-        "fecha": "September 2024 - January 2025",
-        "descripcion": "Web Developer with experience in theme customization on WordPress, responsive design, and integration of visual elements (CSS, HTML)."
-      },
-      {
-        "tipo": "experiencia",
-        "titulo": "Freelance Developer",
-        "lugar": "Freelance",
-        "fecha": "Present",
-        "descripcion": ""
-      },
-      {
-        "tipo": "education",
-        "titulo": "Computing and Information Technology",
-        "lugar": "Cibertec",
-        "fecha": "2018 - 2020",
-        "descripcion": "Graduated with specialization in web development."
-      },
-      {
-        "tipo": "education",
-        "titulo": "Intermediate Angular Course",
-        "lugar": "Online Platform",
-        "fecha": "2021",
-        "descripcion": "Specialized course in Angular, RxJS, and best practices."
-      },
-      {
-        "tipo": "education",
-        "titulo": "Cloud Computing",
+        "titulo": "Cloud Computing: AWS - Azure - Google Cloud",
         "lugar": "National University of Engineering",
         "fecha": "2025",
-        "descripcion": "Cloud Computing Course Certificate: AWS - Azure - Google Cloud."
+        "credencial": "ID: 017-0016500",
+        "url": "https://drive.google.com/file/d/1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "tipo": "educacion",
+        "titulo": "Scrum for Ops and DevOps Fundamentals Certified (SODFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2025",
+        "credencial": "ID: 1014337",
+        "url": "https://drive.google.com/file/d/1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "titulo": "Intermediate Angular Course",
+        "lugar": "Online Platform Flyncer",
+        "fecha": "2021",
+        "credencial": "ID: 19c156fe-da4c-416d-be76-d100034e1b84",
+        "url": "https://drive.google.com/file/d/1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "titulo": "Scrum Fundamentals Certified (SFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2020",
+        "credencial": "ID: 812772",
+        "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2%2Fview&screenshot=true&embed=screenshot.url"
       }
     ]
+  },
+  "project": {
+    "titulo": "Projects",
+    "description_1": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_2": "This is a test project description",
+    "description_3": "Lorem ipsum dolor sit amet, Lorem ipsum",
+    "description_4": "This is a test project description.",
+    "description_5": "Lorem ipsum dolor sit amet, Lorem ipsum"
+  },
+  "contacto": {
+    "titulo": "Contact",
+    "descripcion": "I am currently open to new projects and job opportunities. If you have an interesting proposal or would like to work with me, feel free to reach out.",
+    "nombre": "Name",
+    "email": "Email",
+    "mensaje": "Message",
+    "enviar": "Send message",
+    "placeholder": {
+      "nombre": "Your name",
+      "email": "youremail@email.com",
+      "mensaje": "Your message..."
+    },
+    "validacion": {
+      "nombre": "Name is required.",
+      "email": "Enter a valid email.",
+      "mensaje": "Message must be at least 10 characters."
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -8,6 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SharedModule } from '../shared/shared.module';
 import { ResumenComponent } from './resumen/resumen.component';
 
 @NgModule({
@@ -15,7 +17,8 @@ import { ResumenComponent } from './resumen/resumen.component';
     HomeComponent,
     AboutComponent,
     SkillsComponent,
-    ResumenComponent
+    ProjectsComponent,
+    ResumenComponent,
   ],
   imports: [
     CommonModule,
@@ -24,10 +27,12 @@ import { ResumenComponent } from './resumen/resumen.component';
     RouterModule.forChild([
       { path: 'home', component: HomeComponent },
       { path: 'about-me', component: AboutComponent },
-      { path: 'resume', component: ResumenComponent },
       { path: 'skills', component: SkillsComponent },
+      { path: 'portfolio', component: ProjectsComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
-    ])
+    ]),
+    SharedModule,
+    NgOptimizedImage
   ]
 })
 export class FeaturesModule { }

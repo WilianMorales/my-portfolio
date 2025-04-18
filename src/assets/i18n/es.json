@@ -8,11 +8,11 @@
   },
   "about": {
     "title": "Sobre mí",
-    "greeting": "Profesional Técnico | Desarrollador Frontend | Desarrollador Web",
-    "description1": "Soy un desarrollador apasionado por la tecnología y el diseño web. Me especializo en crear interfaces dinámicas y optimizadas, brindando experiencias fluidas y agradables a los usuarios.",
-    "description2": "Aunque mi fuerte es el frontend, también tengo conocimientos en backend y bases de datos, lo que me permite desarrollar soluciones más completas y escalables.",
-    "description3": "Siempre estoy explorando nuevas tecnologías, perfeccionando mi código y explorando formas innovadoras de crear mejores proyectos",
-    "description4": "Me motiva enfrentar nuevos desafíos y oportunidades para seguir creciendo en el mundo del desarrollo web.",
+    "greeting": "Profesional Técnico | Desarrollador web frontend",
+    "description1": "Hola soy William Morales, técnico egresado de la carrera de Computación e Informática.",
+    "description2": "Mi enfoque principal es el desarrollo front-end, aunque también tengo experiencia en backend y bases de datos, lo que me ha permitido fortalecer mis conocimientos en la creación de aplicaciones web dinámicas y funcionales.",
+    "description3": "Me caracterizo por mi capacidad para trabajar en equipo, mi habilidad para analizar y resolver problemas, mi adaptabilidad a los cambios, creatividad y responsabilidad.",
+    "description4": "Siempre busco nuevos desafíos y oportunidades para seguir creciendo en el mundo del desarrollo web.",
     "download_cv": "Descargar CV"
   },
   "skills": {
@@ -20,45 +20,92 @@
     "skillsTitle": "HABILIDADES TÉCNICAS"
   },
   "resumen": {
-    "titulo": "Resumen",
     "educacion": "Educación",
-    "experiencia": "Experiencia Laboral",
-    "timeline": [
+    "experiencia": "Experiencia Laboral"
+  },
+  "work": {
+    "type": "Practicas",
+    "titulo": "Desarrollador Front-end",
+    "logo": "assets/images/horisson.webp",
+    "lugar": "Horisson Shop",
+    "fecha": "Sep. 2024 - Ene. 2025",
+    "descripcion": "Personalización de temas en WordPress y creación de diseño responsivo."
+  },
+  "education": {
+    "tipo": "Técnico",
+    "titulo": "Computación e Informática",
+    "logo": "/assets/images/cibertec.webp",
+    "lugar": "CIBERTEC",
+    "ciudad": "Trujillo - Perú",
+    "fecha": "Ene. 2018 - Dic. 2020",
+    "descripcion": "Egresado con especialización en desarrollo web."
+  },
+  "certificado": {
+    "titulo": "Cursos y Certificaciones",
+    "viewCred": "Ver Credencial",
+    "cursos": [
       {
-        "tipo": "experiencia",
-        "titulo": "Desarrollador Web",
-        "lugar": "Horisson Shop",
-        "fecha": "Septiembre 2024 - Enero 2025",
-        "descripcion": "Desarrollador Web con experiencia en personalización de temas en WordPress, diseño responsivo, integración de elementos visuales (CSS, HTML)."
-      },
-      {
-        "tipo": "experiencia",
-        "titulo": "Desarrollador Freelance",
-        "lugar": "Freelance",
-        "fecha": "Actualidad",
-        "descripcion": ""
+        "tipo": "educacion",
+        "titulo": "Computación en la nube: AWS, Azure y Google Cloud",
+        "lugar": "Universidad Nacional de Ingeniería",
+        "fecha": "2025",
+        "credencial": "ID: 017-0016500",
+        "url": "https://drive.google.com/file/d/1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
       },
       {
         "tipo": "educacion",
-        "titulo": "Computación e Informática",
-        "lugar": "Cibertec",
-        "fecha": "2018 - 2020",
-        "descripcion": "Egresado con especialización en desarrollo web."
+        "titulo": "Certificación en fundamentos de Scrum para operaciones y DevOps (SODFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2025",
+        "credencial": "ID: 1014337",
+        "url": "https://drive.google.com/file/d/1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
       },
       {
         "tipo": "educacion",
         "titulo": "Curso Avanzado de Angular",
-        "lugar": "Plataforma Online",
+        "lugar": "Plataforma Online Flyncer",
         "fecha": "2023",
-        "descripcion": "Curso especializado en Angular, RxJS y buenas prácticas."
+        "credencial": "ID: 19c156fe-da4c-416d-be76-d100034e1b84",
+        "url": "https://drive.google.com/file/d/1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR%2Fview&screenshot=true&embed=screenshot.url"
       },
       {
         "tipo": "educacion",
-        "titulo": "Cloud Computing",
-        "lugar": "Universidad Nacional de Ingeniería",
-        "fecha": "2025",
-        "descripcion": "Certificado de Curso de Cloud Computing: AWS - Azure - Google Cloud."
+        "titulo": "Certificación en fundamentos de Scrum (SFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2020",
+        "credencial": "ID: 812772",
+        "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2%2Fview&screenshot=true&embed=screenshot.url"
       }
     ]
+  },
+  "project": {
+    "titulo": "Proyectos",
+    "description_1": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_2": "Esta es una descripción de proyecto de prueba.",
+    "description_3": "Lorem ipsum dolor sit amet, Lorem ipsum",
+    "description_4": "Esta es una descripción de proyecto de prueba.",
+    "description_5": "Lorem ipsum dolor sit amet, Lorem ipsum"
+  },
+  "contacto": {
+    "titulo": "Contáctame",
+    "descripcion": "Actualmente, estoy abierto a nuevos proyectos y oportunidades laborales. Si tienes una propuesta interesante o te gustaría trabajar conmigo, no dudes en contactarme.",
+    "nombre": "Nombre",
+    "email": "Correo electrónico",
+    "mensaje": "Mensaje",
+    "enviar": "Enviar mensaje",
+    "placeholder": {
+      "nombre": "Tu nombre.",
+      "email": "tucorreo@email.com",
+      "mensaje": "Tu mensaje..."
+    },
+    "validacion": {
+      "nombre": "El nombre es obligatorio.",
+      "email": "Ingresa un correo válido.",
+      "mensaje": "El mensaje no puede estar vacío"
+    }
   }
 }

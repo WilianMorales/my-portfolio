@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contenedor {
+  margin-top: calc(2rem + 1px); /* 4rem es la altura del navbar (64px) */
+}
