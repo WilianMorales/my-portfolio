@@ -11,6 +11,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SharedModule } from '../shared/shared.module';
 import { ResumenComponent } from './resumen/resumen.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ResumenComponent } from './resumen/resumen.component';
     SkillsComponent,
     ProjectsComponent,
     ResumenComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
@@ -29,10 +32,12 @@ import { ResumenComponent } from './resumen/resumen.component';
       { path: 'about-me', component: AboutComponent },
       { path: 'skills', component: SkillsComponent },
       { path: 'portfolio', component: ProjectsComponent },
+      { path: 'contact', component: ContactComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]),
     SharedModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ReactiveFormsModule
   ]
 })
 export class FeaturesModule { }

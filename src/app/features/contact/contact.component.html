@@ -1,0 +1,61 @@
+<div class="flex flex-col items-center justify-center max-w-7xl mx-auto my-8 px-4">
+    <!-- Contenido principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <!-- Imagen + Texto (oculto en móviles) -->
+      <div class="flex flex-col items-start justify-center max-w-md mx-auto md:mx-0">
+        <img src="assets/images/contact.webp" alt="Contacto" class="w-full h-auto object-contain mb-4">
+        <p class="text-slate-400 dark:text-slate-300 text-start">
+          {{ 'contacto.descripcion' | translate }}
+        </p>
+      </div>
+
+      <!-- Formulario -->
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+        class="w-full p-6 bg-white/5 dark:bg-gray-800/30 text-white rounded-3xl shadow-xl border border-gray-700 backdrop-blur-md">
+
+        <h2 class="text-3xl lg:text-4xl font-bold text-center text-white dark:text-yellow-500 mb-2">
+          {{ 'contacto.titulo' | translate }}
+        </h2>
+
+        <!-- Campo Nombre -->
+        <div class="mb-5">
+          <label class="block text-sm font-semibold mb-1 text-gray-300">{{ 'contacto.nombre' | translate }}</label>
+          <input type="text" formControlName="nombre"
+            class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+            [placeholder]="'contacto.placeholder.nombre'| translate" />
+          <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-red-400 text-sm mt-1">
+            {{ 'contacto.validacion.nombre' | translate }}
+          </div>
+        </div>
+
+        <!-- Campo Email -->
+        <div class="mb-5">
+          <label class="block text-sm font-semibold mb-1 text-gray-300">{{ 'contacto.email' | translate }}</label>
+          <input type="email" formControlName="email"
+            class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+            [placeholder]="'contacto.placeholder.email'| translate" />
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-red-400 text-sm mt-1">
+            {{ 'contacto.validacion.email' | translate }}
+          </div>
+        </div>
+
+        <!-- Campo Mensaje -->
+        <div class="mb-6">
+          <label class="block text-sm font-semibold mb-1 text-gray-300">{{ 'contacto.mensaje' | translate }}</label>
+          <textarea rows="4" formControlName="mensaje"
+            class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+            [placeholder]="'contacto.placeholder.mensaje'| translate"></textarea>
+          <div *ngIf="mensaje.invalid && (mensaje.dirty || mensaje.touched)" class="text-red-400 text-sm mt-1">
+            {{ 'contacto.validacion.mensaje' | translate }}
+          </div>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button [disabled]="contactForm.invalid" type="submit"
+          class="bg-indigo-600 hover:bg-indigo-500 dark:bg-yellow-600 dark:hover:bg-yellow-600/80 text-slate-200 font-bold py-3 px-4 rounded-lg w-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+          {{ 'contacto.enviar' | translate }}
+        </button>
+
+      </form>
+    </div>
+</div>
