@@ -96,16 +96,32 @@
     "nombre": "Nombre",
     "email": "Correo electrónico",
     "mensaje": "Mensaje",
-    "enviar": "Enviar mensaje",
+    "estadoMensaje": {
+      "enviar": "Enviar mensaje",
+      "enviando": "Enviando...",
+      "enviado": "¡Mensaje enviado!"
+    },
     "placeholder": {
-      "nombre": "Tu nombre.",
-      "email": "tucorreo@email.com",
-      "mensaje": "Tu mensaje..."
+      "NAME_PLACEHOLDER": "Tu nombre",
+      "EMAIL_PLACEHOLDER": "tucorreo@email.com",
+      "MESSAGE_PLACEHOLDER": "Tu mensaje..."
     },
     "validacion": {
-      "nombre": "El nombre es obligatorio.",
-      "email": "Ingresa un correo válido.",
-      "mensaje": "El mensaje no puede estar vacío"
+      "ERROR_NAME": "El nombre es obligatorio.",
+      "ERROR_EMAIL": {
+        "invalid": "Formato de correo no válido."
+      },
+      "ERROR_MESSAGE": {
+        "required": "El mensaje no puede estar vacío.",
+        "minlength": "El mensaje debe tener al menos 10 caracteres.",
+        "whitespace": "El mensaje no puede contener sólo espacios."
+      }
     }
+  },
+  "TOAST": {
+    "SUCCESS_TITLE": "¡Mensaje enviado!",
+    "SUCCESS_MESSAGE": "Te responderemos pronto.",
+    "ERROR_TITLE": "Error al enviar",
+    "ERROR_MESSAGE": "Hubo un problema enviando tu mensaje. Intenta de nuevo."
   }
 }

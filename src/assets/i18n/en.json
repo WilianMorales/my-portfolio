@@ -92,17 +92,33 @@
     "nombre": "Name",
     "email": "Email",
     "mensaje": "Message",
-    "enviar": "Send message",
+    "estadoMensaje": {
+      "enviar": "Send message",
+      "enviando": "Sending...",
+      "enviado": "Message sent!"
+    },
     "placeholder": {
-      "nombre": "Your name",
-      "email": "youremail@email.com",
-      "mensaje": "Your message..."
+      "NAME_PLACEHOLDER": "Your name",
+      "EMAIL_PLACEHOLDER": "youremail@email.com",
+      "MESSAGE_PLACEHOLDER": "Your message..."
     },
     "validacion": {
-      "nombre": "Name is required.",
-      "email": "Enter a valid email.",
-      "mensaje": "Message must be at least 10 characters."
+      "ERROR_NAME": "Name is required.",
+      "ERROR_EMAIL": {
+        "invalid": "Invalid email format."
+      },
+      "ERROR_MESSAGE": {
+        "required": "Message cannot be empty.",
+        "minlength": "Message must be at least 5 characters long.",
+        "whitespace": "Message cannot contain only spaces."
+      }
     }
+  },
+  "TOAST": {
+    "SUCCESS_TITLE": "Message sent!",
+    "SUCCESS_MESSAGE": "We will respond to you soon.",
+    "ERROR_TITLE": "Error sending",
+    "ERROR_MESSAGE": "There was a problem sending your message. Please try again."
   }
 }
 
