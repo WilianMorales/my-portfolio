@@ -4,16 +4,21 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'noimage'
 })
 export class NoimagePipe implements PipeTransform {
-  transform(images: any[]): string {
+  transform(image: string): string {
 
-    if (!images) {
-      return 'assets/images/noimage.png';
+    // Verificamos si la URL de la imagen es válida
+    if (!image || image.trim() === '') {
+      return 'assets/images/noimage.webp';
     }
 
-    if (images.length > 0) {
-      return images[0].url;
-    } else {
-      return 'assets/images/noimage.png';
-    }
+    // Intentamos cargar la imagen
+    const img = new Image();
+    img.src = image;
+
+    img.onerror = () => {
+      return 'assets/images/noimage.webp'; // Si no se encuentra, se usa la imagen por defecto
+    };
+
+    return image;
   }
 }

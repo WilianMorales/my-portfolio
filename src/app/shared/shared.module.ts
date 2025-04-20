@@ -4,12 +4,14 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 import { CertCardComponent } from './components/cert-card/cert-card.component';
+import { NoimagePipe } from './pipe/noimage.pipe';
 
 
 @NgModule({
   declarations: [
     ProjectCardComponent,
-    CertCardComponent
+    CertCardComponent,
+    NoimagePipe
   ],
   imports: [
     CommonModule,

@@ -83,12 +83,7 @@
     ]
   },
   "project": {
-    "titulo": "Proyectos",
-    "description_1": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
-    "description_2": "Esta es una descripción de proyecto de prueba.",
-    "description_3": "Lorem ipsum dolor sit amet, Lorem ipsum",
-    "description_4": "Esta es una descripción de proyecto de prueba.",
-    "description_5": "Lorem ipsum dolor sit amet, Lorem ipsum"
+    "titulo": "Proyectos"
   },
   "contacto": {
     "titulo": "Contáctame",
