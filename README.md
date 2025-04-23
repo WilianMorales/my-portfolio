@@ -1,27 +1,83 @@
-# MyPortfolio
+# 🚀 My Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## 📌 Descripción del Proyecto
 
-## Development server
+Este es un proyecto personal donde muestro mis habilidades como desarrollador web utilizando tecnologías modernas. Aquí podrás encontrar información sobre mí, mis proyectos, habilidades y un formulario de contacto funcional.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##### 🌐 El proyecto está desplegado en GitHub Pages. Puedes ver la DEMO: [MyPortfolio](https://wilianmorales.github.io/my-portfolio)
 
-## Code scaffolding
+![Design preview](./desktop-preview.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tecnologías utilizadas
+- Frontend: Angular 17
 
-## Build
+- Estilos: Tailwind CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Backend: Node.js (para el formulario de contacto)
 
-## Running unit tests
+- Despliegue: GitHub Page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📄 Estructura del proyecto
+El sitio está dividido en varias secciones:
 
-## Running end-to-end tests
+- About: Información sobre mí
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Skills: Lista de mis habilidades técnicas
 
-## Further help
+- Projects: Muestra de mis proyectos destacados
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Contact: Formulario para que puedas ponerte en contacto conmigo​
+
+### 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Si tienes sugerencias o mejoras, no dudes en abrir un issue o enviar un pull request. Estoy abierto a ideas que puedan mejorar este proyecto.
+
+### 📬 Contacto
+Si deseas ponerte en contacto conmigo, puedes hacerlo a través del formulario en la sección de contacto de mi portfolio
+
+## 🔧 Instalación
+Para ejecutar este proyecto localmente, sigue estos pasos:
+
+1. Clona el repositorio:​
+```bash
+git clone https://github.com/WilianMorales/my-portfolio.git
+cd my-portfolio
+```
+2. Instala las dependencias:​
+```bash
+npm install
+```
+3. Inicia el servidor de desarrollo:​
+```bash
+ng serve -o
+ng serve --host IP_DE_TU_RED
+```
+
+## Dependencias implementadas:
+* Tailwind cSS
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+* Ngx-Translate   core/http-loader
+```
+npm install @ngx-translate/core @ngx-translate/http-loader
+```
+* Ngx-Toastr y @angular/animations
+```
+npm install ngx-toastr @angular/animations
+```
+* Ng-Recaptcha
+```
+npm i ng-recaptcha
+```
+* Fontawesome
+```
+npm install @fortawesome/angular-fontawesome@0.14.1 @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+```
+* angular-cli-ghpages
+```
+ng add angular-cli-ghpages
+```
+
+> [!NOTE]
+> 📄 This project by **Wilian Morales** is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.
