@@ -38,4 +38,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm run ng -- deploy --repo=https://github.com/williamsb8/my-portfolio.git --name="Wilian Morales" --email="william_libra_04@hotmail.com" --base-href=/my-portfolio/
+          npm run ng -- deploy --repo=https://github.com/WilianMorales/my-portfolio.git --name="Wilian Morales" --email="willian.moralesch@gmail.com" --base-href=/my-portfolio/
