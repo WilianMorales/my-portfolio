@@ -1,0 +1,122 @@
+{
+  "footer": {
+    "description": "Made with ❤️ by"
+  },
+  "home": {
+    "description": "Frontend Developer"
+  },
+  "about": {
+    "title": "About me",
+    "greeting": "Technical Professional | Frontend web developer",
+    "description1": "Hi, I'm William Morales, a technician who graduated in Computing and Informatics.",
+    "description2": "My main focus is front-end development, although I also have experience in back-end and databases, which has allowed me to strengthen my knowledge in creating dynamic and functional web applications.",
+    "description3": "I'm characterized by my ability to work in a team, my problem-solving skills, adaptability to changes, creativity, and responsibility.",
+    "description4": "I’m always looking for new challenges and opportunities to continue growing in the world of web development.",
+    "download_cv": "Download CV"
+  },
+  "skills": {
+    "title": "Skills",
+    "skillsTitle": "TECHNICAL SKILLS"
+  },
+  "resumen": {
+    "educacion": "Education",
+    "experiencia": "Work Experience"
+  },
+  "work": {
+    "type": "Practices",
+    "titulo": "Frontend Developer",
+    "logo": "assets/images/horisson.webp",
+    "lugar": "Horisson Shop",
+    "fecha": "Sep. 2024 - Jan. 2025",
+    "descripcion": "WordPress theme customization and responsive design creation."
+  },
+  "education": {
+    "tipo": "Technical",
+    "titulo": "Computing and Information",
+    "logo": "assets/images/cibertec.webp",
+    "lugar": "CIBERTEC",
+    "fecha": "Jan. 2018 - Dec. 2020",
+    "ciudad": "Trujillo - Perú",
+    "descripcion": "Graduated with specialization in web development."
+  },
+  "certificado": {
+    "titulo": "Courses and Certifications",
+    "viewCred": "View Credential",
+    "cursos": [
+      {
+        "titulo": "Cloud Computing: AWS - Azure - Google Cloud",
+        "lugar": "National University of Engineering",
+        "fecha": "2025",
+        "credencial": "ID: 017-0016500",
+        "url": "https://drive.google.com/file/d/1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "tipo": "educacion",
+        "titulo": "Scrum for Ops and DevOps Fundamentals Certified (SODFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2025",
+        "credencial": "ID: 1014337",
+        "url": "https://drive.google.com/file/d/1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "titulo": "Intermediate Angular Course",
+        "lugar": "Online Platform Flyncer",
+        "fecha": "2021",
+        "credencial": "ID: 19c156fe-da4c-416d-be76-d100034e1b84",
+        "url": "https://drive.google.com/file/d/1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR%2Fview&screenshot=true&embed=screenshot.url"
+      },
+      {
+        "titulo": "Scrum Fundamentals Certified (SFC)",
+        "lugar": "SCRUMstudy",
+        "fecha": "2020",
+        "credencial": "ID: 812772",
+        "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
+        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2%2Fview&screenshot=true&embed=screenshot.url"
+      }
+    ]
+  },
+  "project": {
+    "titulo": "Projects"
+  },
+  "contacto": {
+    "titulo": "Contact",
+    "descripcion": "I am currently open to new projects and job opportunities. If you have an interesting proposal or would like to work with me, feel free to reach out.",
+    "nombre": "Name",
+    "email": "Email",
+    "mensaje": "Message",
+    "estadoMensaje": {
+      "enviar": "Send message",
+      "enviando": "Sending...",
+      "enviado": "Message sent!"
+    },
+    "placeholder": {
+      "NAME_PLACEHOLDER": "Your name",
+      "EMAIL_PLACEHOLDER": "youremail@email.com",
+      "MESSAGE_PLACEHOLDER": "Your message..."
+    },
+    "validacion": {
+      "ERROR_NAME": "Name is required.",
+      "ERROR_EMAIL": {
+        "invalid": "Invalid email format."
+      },
+      "ERROR_MESSAGE": {
+        "required": "Message cannot be empty.",
+        "minlength": "Message must be at least 5 characters long.",
+        "whitespace": "Message cannot contain only spaces."
+      }
+    }
+  },
+  "TOAST": {
+    "SUCCESS_TITLE": "Message sent!",
+    "SUCCESS_MESSAGE": "We will respond to you soon.",
+    "ERROR_TITLE": "Error sending",
+    "ERROR_MESSAGE": "There was a problem sending your message. Please try again."
+  }
+}
+
+
+
+

@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "title": "Portafolio Personal",
+    "description": "Portafolio web desarrollado en Angular y Tailwind CSS, con modo claro/oscuro, multilenguaje, diseño responsive.",
+    "image": "assets/images/portfolio/portfolio.webp",
+    "technologies": [
+      "Angular v17",
+      "TypeScript",
+      "RxJS",
+      "Tailwind CSS"
+    ],
+    "demo": "https://wilianmorales.github.io/my-portfolio",
+    "repo": "https://github.com/WilianMorales/my-portfolio"
+  },
+  {
+    "id": 2,
+    "title": "MessageStore-Api - Backend",
+    "description": "Backend en Node.js que envía los mensajes del formulario por correo y los almacena en Supabase.",
+    "image": "assets/images/portfolio/messagestoreapi.webp",
+    "technologies": [
+      "Node.Js",
+      "Express",
+      "JavaScript",
+      "Supabase",
+      "Backend"
+    ],
+    "repo": "https://github.com/WilianMorales/message-store-api"
+  },
+  {
+    "id": 3,
+    "title": "MoviePe-App",
+    "description": "Aplicación web de películas desarrollada con Angular, que consume las APIs de TMDb y YouTube.",
+    "image": "assets/images/portfolio/moviepe.webp",
+    "technologies": [
+      "Angular v12",
+      "TypeScript",
+      "RxJS",
+      "Sass",
+      "Bootstrap"
+    ],
+    "demo": "https://moviepe.netlify.app/",
+    "repo": "https://github.com/WilianMorales/MoviePe-App"
+  },
+  {
+    "id": 4,
+    "title": "Pokedev-App",
+    "description": "Aplicación Pokédex desarrollada con Angular que consulta y muestra información desde la PokéAPI.",
+    "image": "assets/images/portfolio/pokeapp.webp",
+    "technologies": [
+      "Angular v12",
+      "TypeScript",
+      "RxJS",
+      "Sass",
+      "Bootstrap"
+    ],
+    "demo": "https://ng-pokedev.netlify.app/",
+    "repo": "https://github.com/WilianMorales/pokedex-App"
+  },
+  {
+    "id": 5,
+    "title": "ApiSistemaVentas .Net",
+    "description": "API RESTful en ASP.NET Core para sistema de ventas con JWT, roles y arquitectura N-Capas.",
+    "image": "assets/images/portfolio/apisistemaventas.webp",
+    "technologies": [
+      "ASP.NET Core 8",
+      "RESTful API",
+      "C#",
+      "JWToken",
+      "SQL Server",
+      "Swagger",
+      "Backend"
+    ],
+    "repo": "https://github.com/WilianMorales/APISistemaVentas-ASPNet"
+  },
+  {
+    "id": 6,
+    "title": "AppSistemaVentas Angular",
+    "description": "App de ventas desarrollada en Angular 15 con Material, conectada a una API REST en ASP.NET.",
+    "image": "assets/images/portfolio/appsistemaventas.webp",
+    "technologies": [
+      "Angular v15",
+      "TypeScript",
+      "RxJS",
+      "Angular Material"
+    ],
+    "repo": "https://github.com/WilianMorales/AppSistemaVentas-Angular"
+  },
+  {
+    "id": 7,
+    "title": "HeroesApp",
+    "description": "Proyecto enfocado en la práctica de Angular Routing, Lazy Loading, Guards y Angular Material.",
+    "image": "assets/images/portfolio/heroesapp.webp",
+    "technologies": [
+      "Angular v14",
+      "TypeScript",
+      "RxJS",
+      "Angular Material",
+      "PrimeFlex",
+      "JsonServer"
+    ],
+    "repo": "https://github.com/WilianMorales/HeroesApp"
+  },
+  {
+    "id": 8,
+    "title": "SportGymApp",
+    "description": "App desarrollada en Angular conectada a Firebase mediante AngularFire para gestionar datos en tiempo real (CRUD).",
+    "image": "assets/images/portfolio/sportgym.webp",
+    "technologies": [
+      "Angular v12",
+      "TypeScript",
+      "RxJS",
+      "Sass",
+      "AngularFire",
+      "Firebase",
+      "Bootstrap"
+    ],
+    "repo": "https://github.com/WilianMorales/sportGym-app",
+    "demo": "https://sportgym.netlify.app/"
+  },
+  {
+    "id": 9,
+    "title": "AuthApp-MEAN",
+    "description": "Repositorio de la aplicación de prueba con autenticación del curso de Angular-JWT (MEAN)",
+    "image": "assets/images/portfolio/app-mean.webp",
+    "technologies": [
+      "Angular v15",
+      "TypeScript",
+      "RxJS",
+      "Node.Js",
+      "Express",
+      "MongoDB",
+      "JWToken",
+      "Backend",
+      "Frontend"
+    ],
+    "repo": "https://github.com/WilianMorales/AuthApp-MEAN"
+  }
+]
