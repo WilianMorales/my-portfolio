@@ -25,7 +25,7 @@
   "work": {
     "type": "Practices",
     "titulo": "Frontend Developer",
-    "logo": "/assets/images/horisson.webp",
+    "logo": "assets/images/horisson.webp",
     "lugar": "Horisson Shop",
     "fecha": "Sep. 2024 - Jan. 2025",
     "descripcion": "WordPress theme customization and responsive design creation."
@@ -33,7 +33,7 @@
   "education": {
     "tipo": "Technical",
     "titulo": "Computing and Information",
-    "logo": "/assets/images/cibertec.webp",
+    "logo": "assets/images/cibertec.webp",
     "lugar": "CIBERTEC",
     "fecha": "Jan. 2018 - Dec. 2020",
     "ciudad": "Trujillo - Perú",

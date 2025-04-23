@@ -4,7 +4,7 @@ import { faBusinessTime, faGraduationCap, faIdCardAlt } from '@fortawesome/free-
 @Component({
   selector: 'app-resumen',
   templateUrl: './resumen.component.html',
-  styles: ''
+  styles: []
 })
 export class ResumenComponent {
   iconStudy = faGraduationCap;

@@ -34,7 +34,7 @@
   "education": {
     "tipo": "Técnico",
     "titulo": "Computación e Informática",
-    "logo": "/assets/images/cibertec.webp",
+    "logo": "assets/images/cibertec.webp",
     "lugar": "CIBERTEC",
     "ciudad": "Trujillo - Perú",
     "fecha": "Ene. 2018 - Dic. 2020",
