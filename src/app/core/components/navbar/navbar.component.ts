@@ -27,7 +27,7 @@ export class NavbarComponent {
     { path: '/home', icon: faHome },
     { path: '/about-me', icon: faUser },
     { path: '/skills', icon: faCode },
-    { path: '/portfolio', icon: faBriefcase },
+    { path: '/projects', icon: faBriefcase },
     { path: '/contact', icon: faEnvelope }
   ];
 

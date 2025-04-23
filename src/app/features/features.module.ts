@@ -31,7 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       { path: 'home', component: HomeComponent },
       { path: 'about-me', component: AboutComponent },
       { path: 'skills', component: SkillsComponent },
-      { path: 'portfolio', component: ProjectsComponent },
+      { path: 'projects', component: ProjectsComponent },
       { path: 'contact', component: ContactComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]),
