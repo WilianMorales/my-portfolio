@@ -37,8 +37,7 @@ export class ContactComponent {
         this.minLengthValidator(10),
         Validators.maxLength(100),
         this.noWhitespaceValidator,
-        Validators.pattern(/^(?!.(<|>|script|select|insert|delete|update|drop|--|;)).$/i),
-        this.xssValidator
+        Validators.pattern(/^(?!.*\b(script|select|insert|delete|update|drop|--|;)\b).*$/i)
       ]]
     });
   }
@@ -131,12 +130,4 @@ export class ContactComponent {
     return isWhitespace ? { 'whitespace': true } : null;
   }
 
-  xssValidator(control: AbstractControl): ValidationErrors | null {
-    const value = control.value;
-    const xssPattern = /<[^>]*script[^>]*>/i;  // Patrón básico de inyección XSS
-    if (xssPattern.test(value)) {
-      return { 'xss': true };
-    }
-    return null;
-  }
 }
