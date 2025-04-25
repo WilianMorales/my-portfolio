@@ -64,6 +64,18 @@
               <small *ngIf="!mensaje.errors?.['required'] && !mensaje.errors?.['whitespace'] && mensaje.errors?.['minLength']" class="flex items-start text-sm text-red-400 space-x-1">
                 {{ 'contacto.validacion.ERROR_MESSAGE.minlength' | translate }}
               </small>
+
+              <small *ngIf="!mensaje.errors?.['required'] && !mensaje.errors?.['whitespace'] && !mensaje.errors?.['minLength'] && mensaje.errors?.['maxLength']" class="flex items-start text-sm text-red-400 space-x-1">
+                {{ 'contacto.validacion.ERROR_MESSAGE.maxlength' | translate }}
+              </small>
+
+              <small *ngIf="!mensaje.errors?.['required'] && !mensaje.errors?.['whitespace'] && !mensaje.errors?.['minLength'] && !mensaje.errors?.['maxLength'] && mensaje.errors?.['pattern']" class="flex items-start text-sm text-red-400 space-x-1">
+                {{ 'contacto.validacion.ERROR_MESSAGE.sqlInjection' | translate }}
+              </small>
+
+              <small *ngIf="!mensaje.errors?.['required'] && !mensaje.errors?.['whitespace'] && !mensaje.errors?.['minLength'] && !mensaje.errors?.['maxLength'] && !mensaje.errors?.['pattern'] && mensaje.errors?.['xss']" class="flex items-start text-sm text-red-400 space-x-1">
+                {{ 'contacto.validacion.ERROR_MESSAGE.xss' | translate }}
+              </small>
             </ng-container>
           </div>
       </div>

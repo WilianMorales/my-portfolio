@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 import { faCheckCircle, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -32,7 +32,14 @@ export class ContactComponent {
     this.contactForm = this.fb.group({
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, this.emailValidator]],
-      mensaje: ['', [Validators.required, this.minLengthValidator(10), this.noWhitespaceValidator]]
+      mensaje: ['', [
+        Validators.required,
+        this.minLengthValidator(10),
+        Validators.maxLength(100),
+        this.noWhitespaceValidator,
+        Validators.pattern(/^(?!.(<|>|script|select|insert|delete|update|drop|--|;)).$/i),
+        this.xssValidator
+      ]]
     });
   }
 
@@ -106,7 +113,7 @@ export class ContactComponent {
     return null;
   }
 
-  // Validación personalizada (mínimo 5 caracteres y no solo espacios)
+  // Validación personalizada (mínimo 10 caracteres y no solo espacios)
   minLengthValidator(min: number) {
     return (control: AbstractControl): { [key: string]: boolean } | null => {
       const value = control.value || '';
@@ -122,5 +129,14 @@ export class ContactComponent {
     const value = (control.value || '').toString(); // seguridad extra si el valor no es string
     const isWhitespace = value.trim().length === 0;
     return isWhitespace ? { 'whitespace': true } : null;
+  }
+
+  xssValidator(control: AbstractControl): ValidationErrors | null {
+    const value = control.value;
+    const xssPattern = /<[^>]*script[^>]*>/i;  // Patrón básico de inyección XSS
+    if (xssPattern.test(value)) {
+      return { 'xss': true };
+    }
+    return null;
   }
 }

@@ -109,7 +109,10 @@
       "ERROR_MESSAGE": {
         "required": "El mensaje no puede estar vacío.",
         "minlength": "El mensaje debe tener al menos 10 caracteres.",
-        "whitespace": "El mensaje no puede contener sólo espacios."
+        "whitespace": "El mensaje no puede contener sólo espacios.",
+        "maxlength": "El mensaje no puede tener más de 100 caracteres.",
+        "sqlInjection": "El mensaje contiene caracteres no permitidos (posible inyección SQL).",
+        "xss": "El mensaje contiene caracteres HTML o JavaScript no permitos."
       }
     }
   },

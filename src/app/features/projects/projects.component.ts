@@ -22,7 +22,6 @@ export class ProjectsComponent {
   loadProjects() {
     this.http.get<Project[]>('assets/data/projects.json')
       .subscribe((work) => {
-        console.log(work);
         this.projects = work;
       });
   }
