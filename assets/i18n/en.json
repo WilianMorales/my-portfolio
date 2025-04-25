@@ -107,8 +107,7 @@
         "minlength": "Message must be at least 5 characters long.",
         "whitespace": "Message cannot contain only spaces.",
         "maxlength": "Message cannot be longer than 100 characters.",
-        "sqlInjection": "Message contains disallowed characters (possible SQL injection).",
-        "xss": "Message contains disallowed HTML or JavaScript characters."
+        "sqlInjection": "Message contains disallowed characters (possible SQL injection)."
       }
     }
   },
