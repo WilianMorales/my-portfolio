@@ -91,13 +91,10 @@ export class ContactComponent {
         this.isSubmitting = false;
         console.error('Error enviando formulario', err);
 
-        // Asegúrate de loguear el error para que sea más fácil de identificar
-        console.log("Detalles del error:", err);
-
         const title = this.translate.instant('TOAST.ERROR_TITLE');
-        const message = this.translate.instant('TOAST.ERROR_MESSAGE');
+        const message = err?.error?.message || this.translate.instant('TOAST.ERROR_MESSAGE');
 
-        this.toastr.error(`${message} - ${err.message}`, title);  // Mostrar el mensaje de error de la respuesta
+        this.toastr.error(message, title);
       }
     });
   }
