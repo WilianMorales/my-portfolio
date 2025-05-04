@@ -89,7 +89,12 @@ export class ContactComponent {
       },
       error: (err) => {
         this.isSubmitting = false;
-        console.error('Error enviando formulario', err);
+
+        if (err.status === 429) {
+          const mensajeLimite = err?.error?.message || '⏳ Has alcanzado el límite de solicitudes. Intenta más tarde.';
+          this.toastr.warning(mensajeLimite, '¡Demasiadas solicitudes!');
+          return;
+        }
 
         const title = this.translate.instant('TOAST.ERROR_TITLE');
         const message = err?.error?.message || this.translate.instant('TOAST.ERROR_MESSAGE');
