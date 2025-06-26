@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
@@ -17,7 +17,7 @@ declare global {
   templateUrl: './contact.component.html',
   styles: []
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements AfterViewInit {
 
   contactForm: FormGroup;
 
@@ -49,30 +49,37 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.initTurnstile();
+  ngAfterViewInit(): void {
+    this.initTurnstileWithRetry();
   }
 
-  initTurnstile() {
-    const interval = 2 * 60 * 1000; // 2 minutos
-    const sitekey = '0x4AAAAAABialvmqysu6WBzx';
+  private initTurnstileWithRetry(attempt: number = 0): void {
+    const RETRY_DELAY = 500;
 
-    const checkApi = setInterval(() => {
-      if (typeof window['turnstile'] !== 'undefined') {
-        clearInterval(checkApi);
+    if (typeof window.turnstile === 'undefined') {
+      setTimeout(() => this.initTurnstileWithRetry(attempt + 1), RETRY_DELAY);
+      return;
+    }
 
-        this.turnstileWidgetId = window['turnstile'].render('#turnstile-container', {
-          sitekey,
-          callback: (token: string) => {
-            this.turnstileToken = token;
-          }
-        });
+    this.renderTurnstile();
+  }
 
-        setInterval(() => {
-          window['turnstile'].reset(this.turnstileWidgetId);
-        }, interval);
+  private renderTurnstile(): void {
+    const container = document.getElementById('turnstile-container');
+    if (!container) return;
+
+    // Limpiar contenedor solo si ya hay un widget
+    if (this.turnstileWidgetId && window.turnstile) {
+      window.turnstile.remove(this.turnstileWidgetId);
+    }
+
+    this.turnstileWidgetId = window.turnstile.render(container, {
+      sitekey: '0x4AAAAAABialvmqysu6WBzx',
+      callback: (token: string) => {
+        this.contactForm.get('turnstileToken')?.setValue(token);
+        this.turnstileToken = token;
       }
-    }, 500);
+    });
   }
 
   get nombre() { return this.contactForm.get('nombre')!; }
