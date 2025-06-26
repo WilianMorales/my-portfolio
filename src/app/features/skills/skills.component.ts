@@ -29,9 +29,9 @@ export class SkillsComponent {
       skills: [
         { name: 'HTML5', icon: faHtml5, color: 'text-orange-500' },
         { name: 'CSS3', icon: faCss3Alt, color: 'text-blue-500' },
-        { name: 'JS', icon: faJsSquare, color: 'text-yellow-500' },
+        { name: 'JavaScript', icon: faJsSquare, color: 'text-yellow-500' },
         { name: 'Angular', icon: faAngular, color: 'text-red-600' },
-        { name: 'TS', img: 'assets/images/skill/typescript.webp' },
+        { name: 'TypeScript', img: 'assets/images/skill/typescript.webp' },
         { name: 'Bootstrap', icon: faBootstrap, color: 'text-purple-500' },
         { name: 'Tailwind Css', img: 'assets/images/skill/tailwindcss.webp' },
         { name: 'Sass', icon: faSass, color: 'text-pink-400' },

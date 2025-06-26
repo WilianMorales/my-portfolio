@@ -13,7 +13,7 @@ Este es un proyecto personal donde muestro mis habilidades como desarrollador we
 
 - Estilos: Tailwind CSS
 
-- Backend: Node.js (para el formulario de contacto)
+- Backend: CloudFlare (para el envio del formulario)
 
 - Despliegue: GitHub Page
 
@@ -65,10 +65,6 @@ npm install @ngx-translate/core @ngx-translate/http-loader
 * Ngx-Toastr y @angular/animations
 ```
 npm install ngx-toastr @angular/animations
-```
-* Ng-Recaptcha
-```
-npm i ng-recaptcha
 ```
 * Fontawesome
 ```
