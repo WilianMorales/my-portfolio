@@ -1,6 +1,19 @@
 [
   {
     "id": 1,
+    "title": "CompuMax - Demo",
+    "description": "Demo en desarrollo de una tienda de tecnología, centrado en mostrar el catálogo de productos. Actualmente permite visualizar algunas rutas.",
+    "image": "assets/images/portfolio/compumax.webp",
+    "technologies": [
+      "Angular v19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Cloudflare"
+    ],
+    "demo": "https://demo-compumax.netlify.app/"
+  },
+  {
+    "id": 2,
     "title": "Portafolio Personal",
     "description": "Portafolio web desarrollado en Angular y Tailwind CSS, con modo claro/oscuro, multilenguaje, diseño responsive.",
     "image": "assets/images/portfolio/portfolio.webp",
@@ -14,7 +27,7 @@
     "repo": "https://github.com/WilianMorales/my-portfolio"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "MessageStore-Api - Backend",
     "description": "Backend en Node.js que envía los mensajes del formulario por correo y los almacena en Supabase.",
     "image": "assets/images/portfolio/messagestoreapi.webp",
@@ -28,7 +41,7 @@
     "repo": "https://github.com/WilianMorales/message-store-api"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "MoviePe-App",
     "description": "Aplicación web de películas desarrollada con Angular, que consume las APIs de TMDb y YouTube.",
     "image": "assets/images/portfolio/moviepe.webp",
@@ -43,7 +56,7 @@
     "repo": "https://github.com/WilianMorales/MoviePe-App"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Pokedev-App",
     "description": "Aplicación Pokédex desarrollada con Angular que consulta y muestra información desde la PokéAPI.",
     "image": "assets/images/portfolio/pokeapp.webp",
@@ -58,7 +71,7 @@
     "repo": "https://github.com/WilianMorales/pokedex-App"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "ApiSistemaVentas .Net",
     "description": "API RESTful en ASP.NET Core para sistema de ventas con JWT, roles y arquitectura N-Capas.",
     "image": "assets/images/portfolio/apisistemaventas.webp",
@@ -74,7 +87,7 @@
     "repo": "https://github.com/WilianMorales/APISistemaVentas-ASPNet"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "AppSistemaVentas Angular",
     "description": "App de ventas desarrollada en Angular 15 con Material, conectada a una API REST en ASP.NET.",
     "image": "assets/images/portfolio/appsistemaventas.webp",
@@ -87,7 +100,7 @@
     "repo": "https://github.com/WilianMorales/AppSistemaVentas-Angular"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "SportGymApp",
     "description": "App desarrollada en Angular conectada a Firebase mediante AngularFire para gestionar datos en tiempo real (CRUD).",
     "image": "assets/images/portfolio/sportgym.webp",
@@ -104,7 +117,7 @@
     "demo": "https://sportgym.netlify.app/"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "AuthApp-MEAN",
     "description": "Repositorio de la aplicación de prueba con autenticación del curso de Angular-JWT (MEAN)",
     "image": "assets/images/portfolio/app-mean.webp",
