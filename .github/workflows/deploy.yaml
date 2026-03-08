@@ -28,7 +28,7 @@ jobs:
         run: npm ci
       
       - name: Build app (prod)
-        run: npm run build
+        run: npm run build -- --configuration production --base-href /my-portfolio/
 
       # Deploy to GitHub Pages (builds + deploys in one step)
       - name: Deploy to GitHub Pages
@@ -39,5 +39,4 @@ jobs:
             --repo=https://github.com/WilianMorales/my-portfolio.git \
             --name="Wilian Morales" \
             --email="willian.moralesch@gmail.com" \
-            --base-href=/my-portfolio/ \
-            --no-silent
+            --base-href=/my-portfolio/
