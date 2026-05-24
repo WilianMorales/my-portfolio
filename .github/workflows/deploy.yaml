@@ -4,8 +4,6 @@ name: Build & Deploy to Github Pages
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build-and-deploy:
@@ -25,7 +23,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       
       - name: Build app (prod)
         run: npm run build -- --configuration production --base-href /my-portfolio/
