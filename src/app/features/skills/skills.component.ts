@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faAngular, faHtml5, faCss3Alt, faNodeJs, faGithub, faJsSquare, faBootstrap, faTrello, faGitAlt, faSass, faBitbucket, faWordpress } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faServer } from '@fortawesome/free-solid-svg-icons';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { NgFor, NgIf, NgClass } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface Skill {
   name: string;
@@ -16,9 +19,10 @@ export interface SkillCategory {
 }
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.css'],
+    imports: [FaIconComponent, NgFor, NgIf, NgClass, TranslatePipe]
 })
 export class SkillsComponent {
   iconCode = faCode;

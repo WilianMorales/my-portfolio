@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { faSun, faMoon, faBars, faTimes, faUser, faHome, faBriefcase, faCode, faTerminal, faIdCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { NgFor, NgClass } from '@angular/common';
 
 export interface Menu {
   path: string;
@@ -12,7 +14,8 @@ export interface Menu {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
+  imports: [FaIconComponent, NgFor, RouterLink, NgClass]
 })
 export class NavbarComponent {
   idioma: string = 'es';

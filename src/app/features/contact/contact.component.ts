@@ -1,10 +1,12 @@
 import { AfterViewInit, Component, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 import { faCheckCircle, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { ContactService } from './contact.service';
+import { NgClass, NgIf } from '@angular/common';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
 declare global {
   interface Window {
@@ -15,7 +17,8 @@ declare global {
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styles: []
+  styles: [],
+  imports: [ReactiveFormsModule, NgClass, NgIf, FaIconComponent, TranslatePipe]
 })
 export class ContactComponent implements AfterViewInit {
 
