@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "title": "MoviePe-App",
+    "title": "MoviePe v2",
     "description": "Aplicación web de películas desarrollada con Angular, que consume las APIs de TMDb y YouTube.",
     "image": "assets/images/portfolio/moviepe.webp",
     "technologies": [
