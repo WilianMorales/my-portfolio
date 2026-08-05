@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faAngular, faHtml5, faCss3Alt, faNodeJs, faGithub, faJsSquare, faBootstrap, faTrello, faGitAlt, faSass, faBitbucket, faWordpress } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faServer } from '@fortawesome/free-solid-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { NgFor, NgIf, NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 
 export interface Skill {
@@ -22,12 +22,13 @@ export interface SkillCategory {
     selector: 'app-skills',
     templateUrl: './skills.component.html',
     styleUrls: ['./skills.component.css'],
-    imports: [FaIconComponent, NgFor, NgIf, NgClass, TranslatePipe]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [FaIconComponent, NgClass, TranslatePipe, NgOptimizedImage]
 })
 export class SkillsComponent {
-  iconCode = faCode;
+  readonly iconCode = faCode;
 
-  skillsCategorias: SkillCategory[] = [
+  readonly skillsCategorias: SkillCategory[] = [
     {
       title: 'FRONTEND',
       skills: [

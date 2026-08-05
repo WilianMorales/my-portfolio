@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
-import { faSun, faMoon, faBars, faTimes, faUser, faHome, faBriefcase, faCode, faTerminal, faIdCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Router, RouterLink } from '@angular/router';
+import { faSun, faMoon, faBars, faTimes, faUser, faHome, faBriefcase, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { filter, map } from 'rxjs';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { NgFor, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 export interface Menu {
   path: string;
@@ -15,18 +17,19 @@ export interface Menu {
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  imports: [FaIconComponent, NgFor, RouterLink, NgClass]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FaIconComponent, RouterLink, NgClass]
 })
 export class NavbarComponent {
-  idioma: string = 'es';
+  private readonly translate = inject(TranslateService);
+  private readonly router = inject(Router);
 
-  // Iconos de FontAwesome
-  iconBars = faBars;
-  iconTimes = faTimes;
-  iconSol = faSun;
-  iconLuna = faMoon;
+  readonly iconBars = faBars;
+  readonly iconTimes = faTimes;
+  readonly iconSol = faSun;
+  readonly iconLuna = faMoon;
 
-  menuLinks: Menu[] = [
+  readonly menuLinks: Menu[] = [
     { path: '/home', icon: faHome },
     { path: '/about-me', icon: faUser },
     { path: '/skills', icon: faCode },
@@ -34,49 +37,56 @@ export class NavbarComponent {
     { path: '/contact', icon: faEnvelope }
   ];
 
-  esModoOscuro: boolean = false;
-  menuAbierto: boolean = false;
+  readonly idioma = signal(localStorage.getItem('idioma') || 'es');
+  readonly esModoOscuro = signal(localStorage.getItem('modoOscuro') === 'true');
+  readonly menuAbierto = signal(false);
 
-  constructor(private translate: TranslateService, private router: Router) {
-    this.idioma = localStorage.getItem('idioma') || 'es';
-    this.translate.use(this.idioma);
-    this.esModoOscuro = localStorage.getItem('modoOscuro') === 'true';
+  private readonly currentUrl = toSignal(
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      map(() => this.router.url)
+    ),
+    { initialValue: this.router.url }
+  );
+
+  constructor() {
+    this.translate.use(this.idioma());
     this.aplicarModoOscuro();
   }
 
   isActive(path: string): boolean {
-    return this.router.url === path;
+    return this.currentUrl() === path;
   }
 
-  toggleMenu() {
-    this.menuAbierto = !this.menuAbierto;
+  toggleMenu(): void {
+    this.menuAbierto.update(abierto => !abierto);
   }
 
-  cambiarIdioma() {
-    this.idioma = this.idioma === 'es' ? 'en' : 'es';
-    this.translate.use(this.idioma);
-    localStorage.setItem('idioma', this.idioma);
+  cambiarIdioma(): void {
+    const nuevoIdioma = this.idioma() === 'es' ? 'en' : 'es';
+    this.idioma.set(nuevoIdioma);
+    this.translate.use(nuevoIdioma);
+    localStorage.setItem('idioma', nuevoIdioma);
   }
 
-  toggleModoOscuro() {
-    this.esModoOscuro = !this.esModoOscuro;
-    localStorage.setItem('modoOscuro', this.esModoOscuro.toString());
+  toggleModoOscuro(): void {
+    this.esModoOscuro.update(oscuro => !oscuro);
+    localStorage.setItem('modoOscuro', this.esModoOscuro().toString());
     this.aplicarModoOscuro();
   }
 
-  aplicarModoOscuro() {
-    if (this.esModoOscuro) {
+  private aplicarModoOscuro(): void {
+    if (this.esModoOscuro()) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
   }
-  cerrarMenu(event: Event) {
-    // Verifica si el clic ocurrió en un <a>
+
+  cerrarMenu(event: Event): void {
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' || target.closest('a')) {
-      this.menuAbierto = false;
+      this.menuAbierto.set(false);
     }
   }
-
 }

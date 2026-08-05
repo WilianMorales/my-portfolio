@@ -76,8 +76,8 @@
   </h3>
 
   <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 mt-6">
-    <ng-container *ngFor="let cert of ('certificado.cursos' | translate)">
+    @for (cert of ('certificado.cursos' | translate); track cert.titulo) {
       <app-cert-card [certificado]="cert" [viewCredText]="'certificado.viewCred' | translate"></app-cert-card>
-    </ng-container>
+    }
   </div>
 </div>
