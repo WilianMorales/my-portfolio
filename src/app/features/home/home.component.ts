@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
@@ -8,10 +9,11 @@ import { TranslatePipe } from '@ngx-translate/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [FaIconComponent, TranslatePipe]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FaIconComponent, TranslatePipe, NgOptimizedImage]
 })
 export class HomeComponent {
-  iconCode = faCode;
-  iconLinkedin = faLinkedin;
-  iconGithub = faGithub;
+  readonly iconCode = faCode;
+  readonly iconLinkedin = faLinkedin;
+  readonly iconGithub = faGithub;
 }
