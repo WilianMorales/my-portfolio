@@ -1,3 +1,4 @@
+
 # 🚀 My Portfolio
 
 ## 📌 Descripción del Proyecto
@@ -9,30 +10,28 @@ Este es un proyecto personal donde muestro mis habilidades como desarrollador we
 ![Design preview](./desktop-preview.png)
 
 ## 🛠️ Tecnologías utilizadas
-- Frontend: Angular 17
-
-- Estilos: Tailwind CSS
-
-- Backend: CloudFlare (para el envio del formulario)
-
-- Despliegue: GitHub Page
+- **Frontend:** Angular 19
+- **Estilos:** Tailwind CSS
+- **Internacionalización:** ngx-translate (ES / EN)
+- **Iconos:** Font Awesome (`@fortawesome/angular-fontawesome`)
+- **Backend:** Cloudflare Worker (envío del formulario de contacto)
+- **Despliegue:** GitHub Pages (CI/CD con GitHub Actions)
 
 ## 📄 Estructura del proyecto
+
 El sitio está dividido en varias secciones:
 
-- About: Información sobre mí
-
-- Skills: Lista de mis habilidades técnicas
-
-- Projects: Muestra de mis proyectos destacados
-
-- Contact: Formulario para que puedas ponerte en contacto conmigo​
+- **Home**: Landing con presentación y enlaces a redes.
+- **About**: Información sobre mí, incluye el resumen (educación y experiencia).
+- **Skills**: Categorías de habilidades técnicas (frontend, backend, herramientas).
+- **Projects**: Muestra de proyectos destacados.
+- **Contact**: Formulario de contacto con validaciones y protección Cloudflare Turnstile.
 
 ### 🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Si tienes sugerencias o mejoras, no dudes en abrir un issue o enviar un pull request. Estoy abierto a ideas que puedan mejorar este proyecto.
 
 ### 📬 Contacto
-Si deseas ponerte en contacto conmigo, puedes hacerlo a través del formulario en la sección de contacto de mi portfolio
+Si deseas ponerte en contacto conmigo, puedes hacerlo a través del formulario en la sección de contacto de mi portfolio.
 
 ## 🔧 Instalación
 Para ejecutar este proyecto localmente, sigue estos pasos:
@@ -52,13 +51,25 @@ ng serve -o
 ng serve --host IP_DE_TU_RED
 ```
 
+## 🧪 Scripts disponibles
+
+```bash
+npm start           # ng serve
+npm run build       # ng build
+npm run build:prod  # ng build --configuration production --base-href /my-portfolio/
+```
+
+## 🚢 Despliegue
+
+El despliegue a GitHub Pages es automático mediante GitHub Actions (`.github/workflows/deploy.yaml`) en cada push a `master`: instala dependencias, compila en modo producción y publica con `angular-cli-ghpages`.
+
 ## Dependencias implementadas:
-* Tailwind cSS
+* Tailwind CSS
 ```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
-* Ngx-Translate   core/http-loader
+* Ngx-Translate core/http-loader
 ```
 npm install @ngx-translate/core @ngx-translate/http-loader
 ```
@@ -68,7 +79,7 @@ npm install ngx-toastr @angular/animations
 ```
 * Fontawesome
 ```
-npm install @fortawesome/angular-fontawesome@0.14.1 @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+npm install @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 ```
 * angular-cli-ghpages
 ```
