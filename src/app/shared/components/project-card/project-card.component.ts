@@ -3,15 +3,15 @@ import { NgOptimizedImage } from '@angular/common';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { NoimagePipe } from '../../pipe/noimage.pipe';
-import { Project } from '../../interfaces/project.interface';
+import { NoImagePipe } from '@app/shared/pipes/no-image.pipe';
+import { Project } from '@app/shared/models/project.interface';
 
 @Component({
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FaIconComponent, NoimagePipe, NgOptimizedImage]
+  imports: [FaIconComponent, NoImagePipe, NgOptimizedImage]
 })
 export class ProjectCardComponent {
   readonly iconLink = faLink;

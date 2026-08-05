@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Project } from '../../shared/interfaces/project.interface';
+import { Project } from '@app/shared/models/project.interface';
 import { HttpClient } from '@angular/common/http';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
+import { ProjectCardComponent } from '@app/shared/components/project-card/project-card.component';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({

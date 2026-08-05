@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { faBusinessTime, faGraduationCap, faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { CertCardComponent } from '../../shared/components/cert-card/cert-card.component';
+import { CertCardComponent } from '@app/shared/components/cert-card/cert-card.component';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({

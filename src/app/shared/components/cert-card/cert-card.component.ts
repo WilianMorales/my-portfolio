@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { Certificado } from '../../interfaces/certificado.interface';
+import { Certificado } from '@app/shared/models/certificado.interface';
 
 @Component({
   selector: 'app-cert-card',
