@@ -12,6 +12,7 @@ import { Project } from '@app/shared/models/project.interface';
   styleUrl: './project-card.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FaIconComponent, NoImagePipe, NgOptimizedImage]
+
 })
 export class ProjectCardComponent {
   readonly iconLink = faLink;
