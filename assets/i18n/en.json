@@ -79,7 +79,21 @@
     ]
   },
   "project": {
-    "titulo": "Projects"
+    "titulo": "Projects",
+    "viewDemo": "View demo of {{title}}",
+    "viewRepo": "View repository of {{title}}"
+  },
+  "nav": {
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "changeLanguage": "Change language",
+    "darkMode": "Enable dark mode",
+    "lightMode": "Enable light mode"
   },
   "contacto": {
     "titulo": "Contact",
