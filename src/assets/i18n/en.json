@@ -81,7 +81,11 @@
   "project": {
     "titulo": "Projects",
     "viewDemo": "View demo of {{title}}",
-    "viewRepo": "View repository of {{title}}"
+    "viewRepo": "View repository of {{title}}",
+    "loading": "Loading projects...",
+    "error": "Projects could not be loaded. Please try again.",
+    "retry": "Retry",
+    "empty": "There are no projects to show yet."
   },
   "nav": {
     "menu": "Open menu",
