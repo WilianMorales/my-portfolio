@@ -30,13 +30,13 @@
   <!-- Botones de enlace y repositorio -->
   <div class="flex border-t border-gray-800 dark:border-gray-900">
     @if (project().demo) {
-      <a [href]="project().demo" target="_blank"
+      <a [href]="project().demo" target="_blank" [attr.aria-label]="'project.viewDemo' | translate: { title: project().title }"
         class="flex-1 py-3 text-center text-white bg-gray-800 hover:bg-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200">
         <fa-icon [icon]="iconLink" size="lg"></fa-icon>
       </a>
     }
     @if (project().repo) {
-      <a [href]="project().repo" target="_blank"
+      <a [href]="project().repo" target="_blank" [attr.aria-label]="'project.viewRepo' | translate: { title: project().title }"
         class="flex-1 py-3 text-center text-white bg-gray-800 hover:bg-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200">
         <fa-icon [icon]="iconGitHub" size="xl"></fa-icon>
       </a>

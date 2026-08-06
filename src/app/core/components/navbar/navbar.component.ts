@@ -7,10 +7,12 @@ import { filter, map } from 'rxjs';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { NgClass } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface Menu {
   path: string;
   icon: IconProp;
+  labelKey: string;
 }
 
 @Component({
@@ -18,7 +20,7 @@ export interface Menu {
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FaIconComponent, RouterLink, NgClass]
+  imports: [FaIconComponent, RouterLink, NgClass, TranslatePipe]
 })
 export class NavbarComponent {
   private readonly translate = inject(TranslateService);
@@ -30,11 +32,11 @@ export class NavbarComponent {
   readonly iconLuna = faMoon;
 
   readonly menuLinks: Menu[] = [
-    { path: '/home', icon: faHome },
-    { path: '/about-me', icon: faUser },
-    { path: '/skills', icon: faCode },
-    { path: '/projects', icon: faBriefcase },
-    { path: '/contact', icon: faEnvelope }
+    { path: '/home', icon: faHome, labelKey: 'nav.home' },
+    { path: '/about-me', icon: faUser, labelKey: 'nav.about' },
+    { path: '/skills', icon: faCode, labelKey: 'nav.skills' },
+    { path: '/projects', icon: faBriefcase, labelKey: 'nav.projects' },
+    { path: '/contact', icon: faEnvelope, labelKey: 'nav.contact' }
   ];
 
   readonly idioma = signal(localStorage.getItem('idioma') || 'es');

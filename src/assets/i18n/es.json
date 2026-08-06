@@ -83,7 +83,21 @@
     ]
   },
   "project": {
-    "titulo": "Proyectos"
+    "titulo": "Proyectos",
+    "viewDemo": "Ver demo de {{title}}",
+    "viewRepo": "Ver repositorio de {{title}}"
+  },
+  "nav": {
+    "menu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "changeLanguage": "Cambiar idioma",
+    "darkMode": "Activar modo oscuro",
+    "lightMode": "Activar modo claro"
   },
   "contacto": {
     "titulo": "Contáctame",
