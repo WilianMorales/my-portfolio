@@ -19,4 +19,5 @@ export class ProjectCardComponent {
   readonly iconGitHub = faGithubAlt;
 
   readonly project = input.required<Project>();
+  readonly priority = input(false);
 }

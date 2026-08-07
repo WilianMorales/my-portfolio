@@ -33,8 +33,8 @@
     } @else {
       <!-- Grilla de proyectos -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-        @for (project of projects(); track project.title) {
-          <app-project-card [project]="project"></app-project-card>
+        @for (project of projects(); track project.title; let i = $index) {
+          <app-project-card [project]="project" [priority]="i === 0"></app-project-card>
         }
       </div>
     }
