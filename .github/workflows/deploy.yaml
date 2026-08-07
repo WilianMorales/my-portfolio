@@ -1,4 +1,4 @@
-# Workflow to build and deploy Angular 18 portfolio to GitHub Pages
+# Workflow to build and deploy Angular 19 portfolio to GitHub Pages
 name: Build & Deploy to Github Pages
 
 on:
@@ -24,7 +24,7 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build app (prod)
         run: npm run build -- --configuration production --base-href /my-portfolio/
 

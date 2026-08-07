@@ -6,10 +6,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 
 export const FEATURES_ROUTES: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about-me', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'home', component: HomeComponent, data: { seo: 'home' } },
+  { path: 'about-me', component: AboutComponent, data: { seo: 'about' } },
+  { path: 'skills', component: SkillsComponent, data: { seo: 'skills' } },
+  { path: 'projects', component: ProjectsComponent, data: { seo: 'projects' } },
+  { path: 'contact', component: ContactComponent, data: { seo: 'contact' } },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

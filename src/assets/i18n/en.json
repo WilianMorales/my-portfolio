@@ -52,12 +52,11 @@
         "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
       },
       {
-        "tipo": "educacion",
         "titulo": "Scrum for Ops and DevOps Fundamentals Certified (SODFC)",
         "lugar": "SCRUMstudy",
         "fecha": "2025",
         "credencial": "ID: 1014337",
-        "url": "https://drive.google.com/file/d/1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM/view",
+        "url": "https://www.scrumstudy.com/certification/verify?type=SODFC&number=1014337",
         "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
       },
       {
@@ -74,7 +73,7 @@
         "fecha": "2020",
         "credencial": "ID: 812772",
         "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "https://www.scrumstudy.com/certification/verify?type=SFC&number=812772"
       }
     ]
   },
@@ -136,9 +135,27 @@
     "SUCCESS_MESSAGE": "We will respond to you soon.",
     "ERROR_TITLE": "Error sending",
     "ERROR_MESSAGE": "There was a problem sending your message. Please try again."
+  },
+  "seo": {
+    "home": {
+      "title": "Wilian Morales | Frontend & Web Developer",
+      "description": "Portfolio of Wilian Morales, a Frontend & Web Developer specializing in Angular and modern web application development."
+    },
+    "about": {
+      "title": "About | Wilian Morales",
+      "description": "Learn more about my experience as a Frontend & Web Developer, my professional journey, and the technologies I use to build modern web applications."
+    },
+    "skills": {
+      "title": "Skills | Wilian Morales",
+      "description": "Explore my technical skills in Angular, TypeScript, JavaScript, RxJS, Docker, Git, and modern web development."
+    },
+    "projects": {
+      "title": "Projects | Wilian Morales",
+      "description": "Discover projects built with Angular, TypeScript, Node.js, and other technologies focused on modern web application development."
+    },
+    "contact": {
+      "title": "Contact | Wilian Morales",
+      "description": "Looking for a Frontend & Web Developer? Get in touch to discuss projects, collaborations, or career opportunities."
+    }
   }
 }
-
-
-
-

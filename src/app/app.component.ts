@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { SeoService } from './core/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,9 @@ import { FooterComponent } from './core/components/footer/footer.component';
   imports: [RouterOutlet, NavbarComponent, FooterComponent]
 })
 export class AppComponent {
-  readonly title = 'my-portfolio';
+  private readonly seoService = inject(SeoService);
+
+  constructor() {
+    this.seoService.init();
+  }
 }
