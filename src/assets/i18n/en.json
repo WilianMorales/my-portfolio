@@ -105,6 +105,8 @@
     "nombre": "Name",
     "email": "Email",
     "mensaje": "Message",
+    "verificando": "Verifying that you are a real person and securing the delivery of your message...",
+    "verificandoDesc": "This step helps us protect the form against automated submissions and spam.",
     "estadoMensaje": {
       "enviar": "Send message",
       "enviando": "Sending...",

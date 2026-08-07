@@ -109,6 +109,8 @@
     "nombre": "Nombre",
     "email": "Correo electrónico",
     "mensaje": "Mensaje",
+    "verificando": "Verificando que eres una persona real y asegurando el envío de tu mensaje...",
+    "verificandoDesc": "Este paso nos ayuda a proteger el formulario contra envíos automáticos y spam.",
     "estadoMensaje": {
       "enviar": "Enviar mensaje",
       "enviando": "Enviando...",
