@@ -15,8 +15,7 @@
     "download_cv": "Download CV"
   },
   "skills": {
-    "title": "Skills",
-    "skillsTitle": "TECHNICAL SKILLS"
+    "title": "Technical skills"
   },
   "resumen": {
     "educacion": "Education",
@@ -146,7 +145,7 @@
       "description": "Learn more about my experience as a Frontend & Web Developer, my professional journey, and the technologies I use to build modern web applications."
     },
     "skills": {
-      "title": "Skills | Wilian Morales",
+      "title": "Technical skills | Wilian Morales",
       "description": "Explore my technical skills in Angular, TypeScript, JavaScript, RxJS, Docker, Git, and modern web development."
     },
     "projects": {

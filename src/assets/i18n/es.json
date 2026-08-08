@@ -15,8 +15,7 @@
     "download_cv": "Descargar CV"
   },
   "skills": {
-    "title": "Habilidades",
-    "skillsTitle": "HABILIDADES TÉCNICAS"
+    "title": "Habilidades técnicas"
   },
   "resumen": {
     "educacion": "Educación",
@@ -146,7 +145,7 @@
       "description": "Conoce mi experiencia como Frontend & Web Developer, mi trayectoria profesional y las tecnologías con las que desarrollo aplicaciones web."
     },
     "skills": {
-      "title": "Habilidades | Wilian Morales",
+      "title": "Habilidades técnicas | Wilian Morales",
       "description": "Descubre mis habilidades en Angular, TypeScript, JavaScript, RxJS, Docker, Git y desarrollo web moderno."
     },
     "projects": {
