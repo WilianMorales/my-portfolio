@@ -7,11 +7,11 @@
   },
   "about": {
     "title": "Sobre mí",
-    "greeting": "Profesional Técnico | Desarrollador web frontend",
-    "description1": "Hola soy Wilian Morales, técnico egresado de la carrera de Computación e Informática.",
-    "description2": "Mi enfoque principal es el desarrollo front-end, aunque también tengo experiencia en backend y bases de datos, lo que me ha permitido fortalecer mis conocimientos en la creación de aplicaciones web dinámicas y funcionales.",
-    "description3": "Me caracterizo por mi capacidad para trabajar en equipo, mi habilidad para analizar y resolver problemas, mi adaptabilidad a los cambios, creatividad y responsabilidad.",
-    "description4": "Siempre busco nuevos desafíos y oportunidades para seguir creciendo en el mundo del desarrollo web.",
+    "greeting": "Desarrollador Web | Frontend & Automatización",
+    "description1": "Hola, soy Wilian Morales, técnico egresado de la carrera de Computación e Informática.",
+    "description2": "Soy desarrollador web, orientado principalmente al desarrollo frontend con Angular, con experiencia en la creación de aplicaciones web, soluciones empresariales, backend y bases de datos. Actualmente me desempeño en el área de Automatización, desarrollando e integrando soluciones que optimizan procesos y mejoran la eficiencia.",
+    "description3": "Disfruto enfrentar nuevos retos, analizar problemas y convertir ideas en soluciones funcionales. Me caracterizo por el trabajo en equipo, la adaptabilidad, la creatividad y la responsabilidad.",
+    "description4": "Me motiva seguir creciendo profesionalmente, aprender nuevas tecnologías y fortalecer constantemente mis habilidades para desarrollar soluciones eficientes y de calidad.",
     "download_cv": "Descargar CV"
   },
   "skills": {
@@ -21,58 +21,119 @@
     "educacion": "Educación",
     "experiencia": "Experiencia Laboral"
   },
-  "work": {
-    "type": "Practicas",
-    "titulo": "Desarrollador Front-end",
-    "logo": "assets/images/horisson.webp",
-    "lugar": "Horisson Shop",
-    "fecha": "Sep. 2024 - Ene. 2025",
-    "descripcion": "Personalización de temas en WordPress y creación de diseño responsivo."
-  },
-  "education": {
-    "tipo": "Técnico",
-    "titulo": "Computación e Informática",
-    "logo": "assets/images/cibertec.webp",
-    "lugar": "CIBERTEC",
-    "ciudad": "Trujillo - Perú",
-    "fecha": "Ene. 2018 - Dic. 2020",
-    "descripcion": "Egresado con especialización en desarrollo web."
-  },
+  "work": [
+    {
+      "titulo": "Centers Junior Developer",
+      "logo": "assets/images/empresas/nttdata.webp",
+      "lugar": "NTT DATA",
+      "fecha": "Nov. 2026 - Actualidad",
+      "descripcion": "Automatización de proyectos, procesos y desarrollo de soluciones web."
+    },
+    {
+      "titulo": "Asistente Técnico de TI",
+      "logo": "assets/images/empresas/mercantil.webp",
+      "lugar": "Mercantil Trujillo E.I.R.L",
+      "fecha": "Jun. 2025 - Sept. 2025",
+      "descripcion": "Procesos informáticas, soporte técnico y optimización de procesos administrativos."
+    },
+    {
+      "tipo": "Practicas",
+      "titulo": "Desarrollador Front-end",
+      "logo": "assets/images/empresas/horisson.webp",
+      "lugar": "Horisson Shop",
+      "fecha": "Sep. 2024 - Dic. 2024",
+      "descripcion": "Personalización de temas en WordPress y creación de diseño responsivo."
+    }
+  ],
+  "education": [
+    {
+      "tipo": "Técnico",
+      "titulo": "Computación e Informática",
+      "logo": "assets/images/cibertec.webp",
+      "lugar": "CIBERTEC",
+      "ciudad": "Trujillo - Perú",
+      "fecha": "Ene. 2018 - Dic. 2020"
+    }
+  ],
   "certificado": {
     "titulo": "Cursos y Certificaciones",
     "viewCred": "Ver Credencial",
     "cursos": [
       {
+        "tipo": "Certificación",
+        "titulo": "Codex Solutions Practitioner",
+        "lugar": "OpenAI - PartnerU",
+        "fecha": "2026 · Venc.: jul. 2027",
+        "credencial": "ID: 498592667",
+        "url": "https://drive.google.com/file/d/159h9b_Hs3yHyR-ZveDWOfDbuKTHwY7SM/view",
+        "view": "assets/images/certificados/Codex-Solutions.webp"
+      },
+      {
+        "tipo": "Certificación",
+        "titulo": "GH-300: GitHub Copilot",
+        "lugar": "Microsoft",
+        "fecha": "2026 · Venc.: jun. 2028",
+        "credencial": "ID: 43F36CB7672BF135",
+        "url": "https://drive.google.com/file/d/1NtyRwIrbdBLKdGKccZTZIuo5KPDr7ABN/view",
+        "view": "assets/images/certificados/GH-300.webp",
+        "badge": "assets/images/badges/gh-300.svg"
+      },
+      {
+        "tipo": "Certificación",
+        "titulo": "AI-900: Microsoft Azure aspectos básicos de la IA",
+        "lugar": "Microsoft",
+        "fecha": "2026",
+        "credencial": "ID: D6E9C917B5DF6EEF",
+        "url": "https://drive.google.com/file/d/1haBctG2co_kjkx0Fl7iy_WVopDwgxH9m/view",
+        "view": "assets/images/certificados/AI-900.webp",
+        "badge": "assets/images/badges/ai-900.svg"
+      },
+      {
+        "tipo": "Curso",
+        "titulo": "Introducción a la programación con Python",
+        "lugar": "Santander Open Academy",
+        "fecha": "2025",
+        "credencial": "ID: OA-2025-1123001999526",
+        "url": "https://drive.google.com/file/d/18-053ZcLq76QPST41eX46nWyhEHIWBOx/view",
+        "view": "assets/images/certificados/Python.webp"
+      },
+      {
+        "tipo": "Curso",
         "titulo": "Computación en la nube: AWS, Azure y Google Cloud",
         "lugar": "Universidad Nacional de Ingeniería",
         "fecha": "2025",
         "credencial": "ID: 017-0016500",
         "url": "https://drive.google.com/file/d/1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "assets/images/certificados/Cloud-Computing.webp"
       },
       {
-        "titulo": "Certificación en fundamentos de Scrum para operaciones y DevOps (SODFC)",
+        "tipo": "Certificación",
+        "titulo": "Scrum para Operaciones y DevOps (SODFC)",
         "lugar": "SCRUMstudy",
         "fecha": "2025",
         "credencial": "ID: 1014337",
         "url": "https://www.scrumstudy.com/certification/verify?type=SODFC&number=1014337",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "assets/images/certificados/SODFC.webp",
+        "badge": "assets/images/badges/sodfc.webp"
       },
       {
+        "tipo": "Curso",
         "titulo": "Curso Avanzado de Angular",
         "lugar": "Plataforma Online Flyncer",
         "fecha": "2023",
         "credencial": "ID: 19c156fe-da4c-416d-be76-d100034e1b84",
         "url": "https://drive.google.com/file/d/1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "assets/images/certificados/Angular-Course.webp"
       },
       {
+        "tipo": "Certificación",
         "titulo": "Certificación en fundamentos de Scrum (SFC)",
         "lugar": "SCRUMstudy",
         "fecha": "2020",
         "credencial": "ID: 812772",
-        "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
-        "view": "https://www.scrumstudy.com/certification/verify?type=SFC&number=812772"
+        "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=812772",
+        "view": "assets/images/certificados/SFC.webp",
+        "badge": "assets/images/badges/sfc.webp"
       }
     ]
   },

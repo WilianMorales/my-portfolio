@@ -1,61 +1,28 @@
-<div class="flex flex-col md:flex-row gap-4 lg:gap-12">
+<div class="flex flex-col gap-4 w-full">
   <!-- Educación -->
-  <div class="flex-1 flex flex-col">
+  <div class="flex flex-col w-full">
     <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 my-4 md:text-center transition-colors">
       <fa-icon [icon]="iconStudy"></fa-icon> {{ 'resumen.educacion' | translate }}
     </h3>
-    <div class="bg-white/10 dark:bg-slate-800/60 shadow-lg rounded-lg p-6 w-full max-w-lg mx-auto md:mx-0">
-      <h3 class="text-sm lg:text-xl font-semibold text-gray-300 dark:text-yellow-500 flex flex-wrap items-center">
-        {{ 'education.titulo' | translate }}
-        <span class="text-xs lg:text-sm ml-4 mt-1 bg-white/80 text-zinc-900 px-2 py-1 rounded-full whitespace-nowrap">
-          {{ 'education.tipo' | translate }}
-        </span>
-      </h3>
-      <div class="flex items-start mt-4">
-        <img [src]="'education.logo' | translate" alt="Logo" class="w-16 h-16 rounded-full">
-        <div class="ml-4 min-w-0">
-          <p class="text-sm text-gray-300 truncate">
-            {{ 'education.lugar' | translate }}
-          </p>
-          <span class="text-xs lg:text-sm text-gray-400">{{ 'education.fecha' | translate }}</span>
-          <p class="text-sm text-slate-300">{{ 'education.ciudad' | translate }}</p>
-          <p class="text-sm mt-1 lg:text-base text-gray-400 dark:text-gray-300">
-            {{ 'education.descripcion' | translate }}
-          </p>
-        </div>
-      </div>
-    </div>
+    @for (edu of ('education' | translate); track edu.titulo) {
+      <app-resumen-card [item]="edu" class="block w-full max-w-sm mx-auto"></app-resumen-card>
+    }
   </div>
 
   <!-- Experiencia -->
-  <div class="flex-1 flex flex-col">
+  <div class="flex flex-col w-full">
     <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 my-4 md:text-center transition-colors">
       <fa-icon [icon]="iconBusiness"></fa-icon> {{ 'resumen.experiencia' | translate }}
     </h3>
-    <div class="bg-white/10 dark:bg-slate-800/60 shadow-lg rounded-lg p-6 w-full max-w-lg mx-auto md:mx-0">
-      <h3 class="text-sm lg:text-xl font-semibold text-gray-300 dark:text-yellow-500 flex flex-wrap items-center">
-        {{ 'work.titulo' | translate }}
-        <span class="text-xs lg:text-sm ml-4 mt-1 bg-white/80 text-zinc-900 px-2 py-1 rounded-full whitespace-nowrap">
-          {{ 'work.type' | translate }}
-        </span>
-      </h3>
-      <div class="flex items-start mt-4">
-        <img [src]="'work.logo' | translate" alt="Logo" class="w-16 h-16 rounded-full">
-        <div class="ml-4 min-w-0">
-          <p class="text-sm text-gray-300 dark:text-gray-400 truncate">
-            {{ 'work.lugar' | translate }}
-          </p>
-          <span class="text-xs lg:text-sm text-gray-400">{{ 'work.fecha' | translate }}</span>
-          <p class="text-sm lg:text-base text-gray-400 dark:text-gray-300">
-            {{ 'work.descripcion' | translate }}
-          </p>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch w-full">
+      @for (job of ('work' | translate); track job.titulo) {
+        <app-resumen-card [item]="job" class="flex flex-col"></app-resumen-card>
+      }
     </div>
   </div>
 </div>
 
-<div class="flex flex-col mt-14 lg:mt-20 mb-8 max-w-full">
+<div class="flex flex-col mt-14 lg:mt-20 mb-8 w-full">
   <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 flex items-center">
     <!-- ícono -->
     <svg class="size-7 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
