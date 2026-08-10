@@ -2,10 +2,13 @@
   {
     "id": 1,
     "title": "Portafolio Personal",
-    "description": "Portafolio web desarrollado en Angular y Tailwind CSS, con modo claro/oscuro, multilenguaje, diseño responsive.",
+    "description": {
+      "es": "Portafolio web responsive con modo claro/oscuro, soporte multilenguaje y diseño moderno.",
+      "en": "Responsive web portfolio with light/dark mode, multilanguage support, and modern design."
+    },
     "image": "assets/images/portfolio/portfolio.webp",
     "technologies": [
-      "Angular v17",
+      "Angular 19",
       "TypeScript",
       "RxJS",
       "Tailwind CSS"
@@ -15,109 +18,189 @@
   },
   {
     "id": 2,
-    "title": "MessageStore-Api - Backend",
-    "description": "Backend en Node.js que envía los mensajes del formulario por correo y los almacena en Supabase.",
-    "image": "assets/images/portfolio/messagestoreapi.webp",
+    "title": "CompuMax",
+    "description": {
+      "es": "Tienda online para venta de computadoras y equipos tecnológicos, con compras rápidas vía WhatsApp.",
+      "en": "Online store for selling computers and tech equipment, with quick purchases via WhatsApp."
+    },
+    "image": "assets/images/portfolio/compumax.webp",
     "technologies": [
-      "Node.Js",
-      "Express",
-      "JavaScript",
-      "Supabase",
-      "Backend"
+      "Angular 19",
+      "TypeScript",
+      "RxJS",
+      "Tailwind CSS"
     ],
-    "repo": "https://github.com/WilianMorales/message-store-api"
+    "demo": "https://demo-compumax.netlify.app/"
   },
   {
     "id": 3,
-    "title": "MoviePe v2",
-    "description": "Aplicación web de películas desarrollada con Angular, que consume las APIs de TMDb y YouTube.",
-    "image": "assets/images/portfolio/moviepe.webp",
+    "title": "Fundo Camino Real",
+    "description": {
+      "es": "Sitio web de un fundo turístico diseñada para gestionar historial de reservas, reservar hospedaje y eventos.",
+      "en": "Website for a tourist farm designed to manage booking history and reserve lodging and events."
+    },
+    "image": "assets/images/portfolio/fundocaminoreal.webp",
     "technologies": [
-      "Angular v12",
+      "Angular 19",
       "TypeScript",
       "RxJS",
-      "Sass",
-      "Bootstrap"
+      "Tailwind CSS"
+    ],
+    "demo": "https://demo-fundocaminoreal.netlify.app/"
+  },
+  {
+    "id": 4,
+    "title": "Tulipie - Podológico",
+    "description": {
+      "es": "Página web para gestión, seguimiento y organización de fichas clínicas digitales en un centro podológico.",
+      "en": "Web page for managing, tracking, and organizing digital clinical records at a podiatry center."
+    },
+    "image": "assets/images/portfolio/tulipie.webp",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "Supabase"
+    ],
+    "demo": "https://demo-tulipie.netlify.app/"
+  },
+  {
+    "id": 5,
+    "title": "MoviePe v2",
+    "description": {
+      "es": "Aplicación web de películas que consume las APIs de TMDb y YouTube para mostrar contenido multimedia.",
+      "en": "Movie web application that consumes the TMDb and YouTube APIs to display multimedia content."
+    },
+    "image": "assets/images/portfolio/moviepe.webp",
+    "images": [
+      "assets/images/portfolio/moviepe.webp",
+      "assets/images/portfolio/views/moviepe-1.webp",
+      "assets/images/portfolio/views/moviepe-2.webp",
+      "assets/images/portfolio/views/moviepe-3.webp"
+    ],
+    "technologies": [
+      "Angular 12",
+      "TypeScript",
+      "RxJS",
+      "Bootstrap",
+      "SCSS"
     ],
     "demo": "https://moviepe.netlify.app/",
     "repo": "https://github.com/WilianMorales/MoviePe-App"
   },
   {
-    "id": 4,
-    "title": "Pokedev-App",
-    "description": "Aplicación Pokédex desarrollada con Angular que consulta y muestra información desde la PokéAPI.",
-    "image": "assets/images/portfolio/pokeapp.webp",
+    "id": 6,
+    "title": "CountryPedia",
+    "description": {
+      "es": "Aplicación web para consultar y visualizar información de países mediante una API externa.",
+      "en": "Web application to look up and display country information through an external API."
+    },
+    "image": "assets/images/portfolio/countrypedia.webp",
+    "images": [
+      "assets/images/portfolio/countrypedia.webp",
+      "assets/images/portfolio/views/countrypedia-1.webp",
+      "assets/images/portfolio/views/countrypedia-2.webp",
+      "assets/images/portfolio/views/countrypedia-3.webp"
+    ],
     "technologies": [
-      "Angular v12",
+      "Angular 19",
       "TypeScript",
       "RxJS",
-      "Sass",
-      "Bootstrap"
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
+    "demo": "https://countrypedia-v2.netlify.app/",
+    "repo": "https://github.com/WilianMorales/CountrypediaApp"
+  },
+  {
+    "id": 7,
+    "title": "Pokedev-App",
+    "description": {
+      "es": "Aplicación Pokédex que consume la PokéAPI para consultar y mostrar información de Pokémon.",
+      "en": "Pokédex application that consumes the PokéAPI to look up and display Pokémon information."
+    },
+    "image": "assets/images/portfolio/pokeapp.webp",
+    "images": [
+      "assets/images/portfolio/pokeapp.webp",
+      "assets/images/portfolio/views/pokeapp-1.webp",
+      "assets/images/portfolio/views/pokeapp-2.webp",
+      "assets/images/portfolio/views/pokeapp-3.webp"
+    ],
+    "technologies": [
+      "Angular 12",
+      "TypeScript",
+      "RxJS",
+      "Bootstrap",
+      "SCSS"
     ],
     "demo": "https://ng-pokedev.netlify.app/",
     "repo": "https://github.com/WilianMorales/pokedex-App"
   },
   {
-    "id": 5,
-    "title": "ApiSistemaVentas .Net",
-    "description": "API RESTful en ASP.NET Core para sistema de ventas con JWT, roles y arquitectura N-Capas.",
-    "image": "assets/images/portfolio/apisistemaventas.webp",
-    "technologies": [
-      "ASP.NET Core 8",
-      "RESTful API",
-      "C#",
-      "JWToken",
-      "SQL Server",
-      "Swagger",
-      "Backend"
-    ],
-    "repo": "https://github.com/WilianMorales/APISistemaVentas-ASPNet"
-  },
-  {
-    "id": 6,
-    "title": "AppSistemaVentas Angular",
-    "description": "App de ventas desarrollada en Angular 15 con Material, conectada a una API REST en ASP.NET.",
-    "image": "assets/images/portfolio/appsistemaventas.webp",
-    "technologies": [
-      "Angular v15",
-      "TypeScript",
-      "RxJS",
-      "Angular Material"
-    ],
-    "repo": "https://github.com/WilianMorales/AppSistemaVentas-Angular"
-  },
-  {
-    "id": 7,
+    "id": 8,
     "title": "SportGymApp",
-    "description": "App desarrollada en Angular conectada a Firebase mediante AngularFire para gestionar datos en tiempo real (CRUD).",
+    "description": {
+      "es": "Aplicación web para gestionar información en tiempo real mediante operaciones CRUD con AngularFire.",
+      "en": "Web application to manage information in real time through CRUD operations with AngularFire."
+    },
     "image": "assets/images/portfolio/sportgym.webp",
     "technologies": [
-      "Angular v12",
-      "TypeScript",
+      "Angular 12",
       "RxJS",
-      "Sass",
-      "AngularFire",
+      "Bootstrap",
       "Firebase",
-      "Bootstrap"
+      "AngularFire"
     ],
     "repo": "https://github.com/WilianMorales/sportGym-app",
     "demo": "https://sportgym.netlify.app/"
   },
   {
-    "id": 8,
+    "id": 9,
+    "title": "MessageStore-Api - Backend",
+    "description": {
+      "es": "API backend que procesa mensajes de formularios, los envía por correo y los almacena en Supabase.",
+      "en": "Backend API that processes form messages, sends them by email, and stores them in Supabase."
+    },
+    "image": "assets/images/portfolio/messagestoreapi.webp",
+    "technologies": [
+      "Node.Js",
+      "Express",
+      "Supabase",
+      "reCAPTCHA v3"
+    ],
+    "repo": "https://github.com/WilianMorales/message-store-api"
+  },
+  {
+    "id": 10,
+    "title": "ApiSistemaVentas - .Net",
+    "description": {
+      "es": "API RESTful para un sistema de ventas con autenticación JWT, roles y arquitectura en N capas.",
+      "en": "RESTful API for a sales system with JWT authentication, roles, and N-layer architecture."
+    },
+    "image": "assets/images/portfolio/apisistemaventas.webp",
+    "technologies": [
+      "ASP.NET Core 8",
+      "JWT",
+      "Swagger",
+      "SQL Server"
+    ],
+    "repo": "https://github.com/WilianMorales/APISistemaVentas-ASPNet"
+  },
+  {
+    "id": 11,
     "title": "AuthApp-MEAN",
-    "description": "Repositorio de la aplicación de prueba con autenticación del curso de Angular-JWT (MEAN)",
+    "description": {
+      "es": "Aplicación de autenticación basada en el stack MEAN con JWT y gestión de sesiones de usuario.",
+      "en": "Authentication application built on the MEAN stack with JWT and user session management."
+    },
     "image": "assets/images/portfolio/app-mean.webp",
     "technologies": [
-      "Angular v15",
-      "TypeScript",
+      "Angular 15",
       "RxJS",
       "Node.Js",
       "Express",
       "MongoDB",
-      "JWToken",
-      "Backend",
-      "Frontend"
+      "JWT"
     ],
     "repo": "https://github.com/WilianMorales/AuthApp-MEAN"
   }

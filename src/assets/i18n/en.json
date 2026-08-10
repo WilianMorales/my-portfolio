@@ -3,7 +3,7 @@
     "description": "Made with ❤️ by"
   },
   "home": {
-    "description": "Frontend Developer"
+    "description": "Web Developer"
   },
   "about": {
     "title": "About me",
@@ -144,7 +144,15 @@
     "loading": "Loading projects...",
     "error": "Projects could not be loaded. Please try again.",
     "retry": "Retry",
-    "empty": "There are no projects to show yet."
+    "empty": "There are no projects to show yet.",
+    "gallery": {
+      "openAlt": "Enlarge image of {{title}}",
+      "close": "Close gallery",
+      "previous": "Previous image",
+      "next": "Next image",
+      "thumbAlt": "View {{index}} of {{title}}",
+      "counter": "{{current}} of {{total}}"
+    }
   },
   "nav": {
     "menu": "Open menu",

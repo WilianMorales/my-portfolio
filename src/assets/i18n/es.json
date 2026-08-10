@@ -3,7 +3,7 @@
     "description": "Hecho con ❤️ por"
   },
   "home":{
-    "description": "Desarrollador Frontend"
+    "description": "Desarrollador Web"
   },
   "about": {
     "title": "Sobre mí",
@@ -144,7 +144,15 @@
     "loading": "Cargando proyectos...",
     "error": "No se pudieron cargar los proyectos. Inténtalo de nuevo.",
     "retry": "Reintentar",
-    "empty": "Aún no hay proyectos para mostrar."
+    "empty": "Aún no hay proyectos para mostrar.",
+    "gallery": {
+      "openAlt": "Ampliar imagen de {{title}}",
+      "close": "Cerrar galería",
+      "previous": "Imagen anterior",
+      "next": "Siguiente imagen",
+      "thumbAlt": "Vista {{index}} de {{title}}",
+      "counter": "{{current}} de {{total}}"
+    }
   },
   "nav": {
     "menu": "Abrir menú",
