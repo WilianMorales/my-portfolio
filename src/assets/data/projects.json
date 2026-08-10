@@ -7,6 +7,7 @@
       "en": "Responsive web portfolio with light/dark mode, multilanguage support, and modern design."
     },
     "image": "assets/images/portfolio/portfolio.webp",
+    "type": "frontend",
     "technologies": [
       "Angular 19",
       "TypeScript",
@@ -24,6 +25,7 @@
       "en": "Online store for selling computers and tech equipment, with quick purchases via WhatsApp."
     },
     "image": "assets/images/portfolio/compumax.webp",
+    "type": "frontend",
     "technologies": [
       "Angular 19",
       "TypeScript",
@@ -40,6 +42,7 @@
       "en": "Website for a tourist farm designed to manage booking history and reserve lodging and events."
     },
     "image": "assets/images/portfolio/fundocaminoreal.webp",
+    "type": "frontend",
     "technologies": [
       "Angular 19",
       "TypeScript",
@@ -56,6 +59,7 @@
       "en": "Web page for managing, tracking, and organizing digital clinical records at a podiatry center."
     },
     "image": "assets/images/portfolio/tulipie.webp",
+    "type": "frontend",
     "technologies": [
       "HTML",
       "JavaScript",
@@ -78,6 +82,7 @@
       "assets/images/portfolio/views/moviepe-2.webp",
       "assets/images/portfolio/views/moviepe-3.webp"
     ],
+    "type": "frontend",
     "technologies": [
       "Angular 12",
       "TypeScript",
@@ -102,6 +107,7 @@
       "assets/images/portfolio/views/countrypedia-2.webp",
       "assets/images/portfolio/views/countrypedia-3.webp"
     ],
+    "type": "frontend",
     "technologies": [
       "Angular 19",
       "TypeScript",
@@ -126,6 +132,7 @@
       "assets/images/portfolio/views/pokeapp-2.webp",
       "assets/images/portfolio/views/pokeapp-3.webp"
     ],
+    "type": "frontend",
     "technologies": [
       "Angular 12",
       "TypeScript",
@@ -144,6 +151,7 @@
       "en": "Web application to manage information in real time through CRUD operations with AngularFire."
     },
     "image": "assets/images/portfolio/sportgym.webp",
+    "type": "frontend",
     "technologies": [
       "Angular 12",
       "RxJS",
@@ -162,6 +170,7 @@
       "en": "Backend API that processes form messages, sends them by email, and stores them in Supabase."
     },
     "image": "assets/images/portfolio/messagestoreapi.webp",
+    "type": "backend",
     "technologies": [
       "Node.Js",
       "Express",
@@ -178,6 +187,7 @@
       "en": "RESTful API for a sales system with JWT authentication, roles, and N-layer architecture."
     },
     "image": "assets/images/portfolio/apisistemaventas.webp",
+    "type": "backend",
     "technologies": [
       "ASP.NET Core 8",
       "JWT",
@@ -194,6 +204,7 @@
       "en": "Authentication application built on the MEAN stack with JWT and user session management."
     },
     "image": "assets/images/portfolio/app-mean.webp",
+    "type": "fullstack",
     "technologies": [
       "Angular 15",
       "RxJS",

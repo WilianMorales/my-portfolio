@@ -145,6 +145,12 @@
     "error": "Projects could not be loaded. Please try again.",
     "retry": "Retry",
     "empty": "There are no projects to show yet.",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
     "gallery": {
       "openAlt": "Enlarge image of {{title}}",
       "close": "Close gallery",
