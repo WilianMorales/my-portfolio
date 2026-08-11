@@ -3,85 +3,162 @@
     "description": "Made with ❤️ by"
   },
   "home": {
-    "description": "Frontend Developer"
+    "description": "Web Developer"
   },
   "about": {
     "title": "About me",
-    "greeting": "Technical Professional | Frontend web developer",
+    "greeting": "Web Developer | Frontend & Automation",
     "description1": "Hi, I'm Wilian Morales, a technician who graduated in Computing and Informatics.",
-    "description2": "My main focus is front-end development, although I also have experience in back-end and databases, which has allowed me to strengthen my knowledge in creating dynamic and functional web applications.",
-    "description3": "I'm characterized by my ability to work in a team, my problem-solving skills, adaptability to changes, creativity, and responsibility.",
-    "description4": "I’m always looking for new challenges and opportunities to continue growing in the world of web development.",
+    "description2": "I’m a web developer, mainly focused on frontend development with Angular, with experience building web applications, enterprise solutions, backend systems, and databases. I currently work in the field of Automation, developing and integrating solutions that optimize processes and improve efficiency.",
+    "description3": "I enjoy taking on new challenges, analyzing problems, and turning ideas into functional solutions. I value teamwork, adaptability, creativity, and responsibility.",
+    "description4": "I’m motivated to continue growing professionally, learning new technologies, and constantly strengthening my skills to build efficient, high-quality solutions.",
     "download_cv": "Download CV"
   },
   "skills": {
-    "title": "Skills",
-    "skillsTitle": "TECHNICAL SKILLS"
+    "title": "Technical skills"
   },
   "resumen": {
     "educacion": "Education",
     "experiencia": "Work Experience"
   },
-  "work": {
-    "type": "Practices",
-    "titulo": "Frontend Developer",
-    "logo": "assets/images/horisson.webp",
-    "lugar": "Horisson Shop",
-    "fecha": "Sep. 2024 - Jan. 2025",
-    "descripcion": "WordPress theme customization and responsive design creation."
-  },
-  "education": {
-    "tipo": "Technical",
-    "titulo": "Computing and Information",
-    "logo": "assets/images/cibertec.webp",
-    "lugar": "CIBERTEC",
-    "fecha": "Jan. 2018 - Dec. 2020",
-    "ciudad": "Trujillo - Perú",
-    "descripcion": "Graduated with specialization in web development."
-  },
+  "work": [
+    {
+      "titulo": "Centers Junior Developer",
+      "logo": "assets/images/empresas/nttdata.webp",
+      "lugar": "NTT DATA",
+      "fecha": "Nov. 2026 - Present",
+      "descripcion": "Project automation, processes, and web solution development."
+    },
+    {
+      "titulo": "Technical IT Assistant",
+      "logo": "assets/images/empresas/mercantil.webp",
+      "lugar": "Mercantil Trujillo E.I.R.L",
+      "fecha": "Jun. 2025 - Sept. 2025",
+      "descripcion": "IT processes, technical support, and administrative process optimization."
+    },
+    {
+      "tipo": "Practices",
+      "titulo": "Frontend Developer",
+      "logo": "assets/images/empresas/horisson.webp",
+      "lugar": "Horisson Shop",
+      "fecha": "Sep. 2024 - Dec. 2024",
+      "descripcion": "WordPress theme customization and responsive design creation."
+    }
+  ],
+  "education": [
+    {
+      "tipo": "Technical",
+      "titulo": "Computing and Information",
+      "logo": "assets/images/cibertec.webp",
+      "lugar": "CIBERTEC",
+      "fecha": "Jan. 2018 - Dec. 2020",
+      "ciudad": "Trujillo - Perú"
+    }
+  ],
   "certificado": {
     "titulo": "Courses and Certifications",
     "viewCred": "View Credential",
     "cursos": [
       {
+        "tipo": "Certification",
+        "titulo": "Codex Solutions Practitioner",
+        "lugar": "OpenAI - PartnerU",
+        "fecha": "2026 · Exp.: Jul. 2027",
+        "credencial": "ID: 498592667",
+        "url": "https://drive.google.com/file/d/159h9b_Hs3yHyR-ZveDWOfDbuKTHwY7SM/view",
+        "view": "assets/images/certificados/Codex-Solutions.webp"
+      },
+      {
+        "tipo": "Certification",
+        "titulo": "GH-300: GitHub Copilot",
+        "lugar": "Microsoft",
+        "fecha": "2026 · Exp.: Jun. 2028",
+        "credencial": "ID: 43F36CB7672BF135",
+        "url": "https://drive.google.com/file/d/1NtyRwIrbdBLKdGKccZTZIuo5KPDr7ABN/view",
+        "view": "assets/images/certificados/GH-300.webp",
+        "badge": "assets/images/badges/gh-300.svg"
+      },
+      {
+        "tipo": "Certification",
+        "titulo": "AI-900: Microsoft Azure AI Fundamentals",
+        "lugar": "Microsoft",
+        "fecha": "2026",
+        "credencial": "ID: D6E9C917B5DF6EEF",
+        "url": "https://drive.google.com/file/d/1haBctG2co_kjkx0Fl7iy_WVopDwgxH9m/view",
+        "view": "assets/images/certificados/AI-900.webp",
+        "badge": "assets/images/badges/ai-900.svg"
+      },
+      {
+        "tipo": "Course",
+        "titulo": "Introduction to Programming Using Python",
+        "lugar": "Santander Open Academy",
+        "fecha": "2025",
+        "credencial": "ID: OA-2025-1123001999526",
+        "url": "https://drive.google.com/file/d/18-053ZcLq76QPST41eX46nWyhEHIWBOx/view",
+        "view": "assets/images/certificados/Python.webp"
+      },
+      {
+        "tipo": "Course",
         "titulo": "Cloud Computing: AWS - Azure - Google Cloud",
         "lugar": "National University of Engineering",
         "fecha": "2025",
         "credencial": "ID: 017-0016500",
         "url": "https://drive.google.com/file/d/1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1o9v3g-9WU2oSrp-T39EhxWfzD7itRm-h%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "assets/images/certificados/Cloud-Computing.webp"
       },
       {
-        "tipo": "educacion",
-        "titulo": "Scrum for Ops and DevOps Fundamentals Certified (SODFC)",
+        "tipo": "Certification",
+        "titulo": "Scrum for Ops & DevOps (SODFC)",
         "lugar": "SCRUMstudy",
         "fecha": "2025",
         "credencial": "ID: 1014337",
-        "url": "https://drive.google.com/file/d/1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1qZcxuB47oWizl7gCiUssjdPIEy9QVIWM%2Fview&screenshot=true&embed=screenshot.url"
+        "url": "https://www.scrumstudy.com/certification/verify?type=SODFC&number=1014337",
+        "view": "assets/images/certificados/SODFC.webp",
+        "badge": "assets/images/badges/sodfc.webp"
       },
       {
+        "tipo": "Course",
         "titulo": "Intermediate Angular Course",
         "lugar": "Online Platform Flyncer",
         "fecha": "2021",
         "credencial": "ID: 19c156fe-da4c-416d-be76-d100034e1b84",
         "url": "https://drive.google.com/file/d/1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1rxEHyKh-xzugZgrTQI-hSQeny-qROMwR%2Fview&screenshot=true&embed=screenshot.url"
+        "view": "assets/images/certificados/Angular-Course.webp"
       },
       {
+        "tipo": "Certification",
         "titulo": "Scrum Fundamentals Certified (SFC)",
         "lugar": "SCRUMstudy",
         "fecha": "2020",
         "credencial": "ID: 812772",
-        "url": "https://drive.google.com/file/d/1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2/view",
-        "view": "https://api.microlink.io/?url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e5KSg5hVu_dbL9cdGPb5qPx0Ditq3YL2%2Fview&screenshot=true&embed=screenshot.url"
+        "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=812772",
+        "view": "assets/images/certificados/SFC.webp",
+        "badge": "assets/images/badges/sfc.webp"
       }
     ]
   },
   "project": {
     "titulo": "Projects",
     "viewDemo": "View demo of {{title}}",
-    "viewRepo": "View repository of {{title}}"
+    "viewRepo": "View repository of {{title}}",
+    "loading": "Loading projects...",
+    "error": "Projects could not be loaded. Please try again.",
+    "retry": "Retry",
+    "empty": "There are no projects to show yet.",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "gallery": {
+      "openAlt": "Enlarge image of {{title}}",
+      "close": "Close gallery",
+      "previous": "Previous image",
+      "next": "Next image",
+      "thumbAlt": "View {{index}} of {{title}}",
+      "counter": "{{current}} of {{total}}"
+    }
   },
   "nav": {
     "menu": "Open menu",
@@ -101,6 +178,8 @@
     "nombre": "Name",
     "email": "Email",
     "mensaje": "Message",
+    "verificando": "Verifying that you are a real person and securing the delivery of your message...",
+    "verificandoDesc": "This step helps us protect the form against automated submissions and spam.",
     "estadoMensaje": {
       "enviar": "Send message",
       "enviando": "Sending...",
@@ -130,9 +209,27 @@
     "SUCCESS_MESSAGE": "We will respond to you soon.",
     "ERROR_TITLE": "Error sending",
     "ERROR_MESSAGE": "There was a problem sending your message. Please try again."
+  },
+  "seo": {
+    "home": {
+      "title": "Wilian Morales | Frontend & Web Developer",
+      "description": "Portfolio of Wilian Morales, a Frontend & Web Developer specializing in Angular and modern web application development."
+    },
+    "about": {
+      "title": "About | Wilian Morales",
+      "description": "Learn more about my experience as a Frontend & Web Developer, my professional journey, and the technologies I use to build modern web applications."
+    },
+    "skills": {
+      "title": "Technical skills | Wilian Morales",
+      "description": "Explore my technical skills in Angular, TypeScript, JavaScript, RxJS, Docker, Git, and modern web development."
+    },
+    "projects": {
+      "title": "Projects | Wilian Morales",
+      "description": "Discover projects built with Angular, TypeScript, Node.js, and other technologies focused on modern web application development."
+    },
+    "contact": {
+      "title": "Contact | Wilian Morales",
+      "description": "Looking for a Frontend & Web Developer? Get in touch to discuss projects, collaborations, or career opportunities."
+    }
   }
 }
-
-
-
-
