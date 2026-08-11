@@ -1,18 +1,65 @@
 <div
-  class="contenedor flex flex-col items-center justify-center min-h-screen mb-16 xl:px-20 2xl:px-32">
-  <div class="flex flex-col items-center justify-center w-full max-w-screen-2xl">
+  class="contenedor flex flex-col items-center min-h-[calc(70vh-20px)] mb-16 xl:px-20 2xl:px-32">
+  <div class="flex flex-col items-center w-full max-w-screen-2xl flex-1">
 
     <!-- Título -->
-    <h1 class="text-4xl font-bold text-center text-white dark:text-yellow-500 mb-8 flex items-center gap-2 flex-wrap justify-center">
+    <h1 class="text-4xl font-bold text-center text-white dark:text-yellow-500 mb-6 flex items-center gap-2 flex-wrap justify-center">
       <fa-icon [icon]="iconPortfolio" class="text-4xl mr-2"></fa-icon> {{ 'project.titulo' | translate }}
     </h1>
 
-    <!-- Grilla de proyectos -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-      @for (project of projects(); track project.title) {
-        <app-project-card [project]="project"></app-project-card>
-      }
-    </div>
+    @if (!isLoading() && !hasError() && projects().length > 0) {
+      <!-- Filtros -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10 mx-auto p-1.5 rounded-3xl sm:rounded-full bg-white/5 dark:bg-slate-800/70 ring-1 ring-white/10 dark:ring-gray-700/60">
+        @for (filter of filters; track filter.value) {
+          <button
+            type="button"
+            (click)="setFilter(filter.value)"
+            [attr.aria-pressed]="activeFilter() === filter.value"
+            [class]="filterClasses(filter.value)">
+            <fa-icon [icon]="filter.icon" class="text-base sm:text-sm"></fa-icon>
+            <span class="text-[10px] sm:text-sm leading-none">{{ filter.labelKey | translate }}</span>
+          </button>
+        }
+      </div>
+    }
+
+    @if (isLoading()) {
+      <!-- Estado de carga -->
+      <div class="flex flex-1 flex-col items-center justify-center text-gray-300 dark:text-gray-400" role="status">
+        <fa-icon [icon]="iconSpinner" class="text-4xl animate-spin mb-4"></fa-icon>
+        <p>{{ 'project.loading' | translate }}</p>
+      </div>
+    } @else if (hasError()) {
+      <!-- Estado de error -->
+      <div class="flex flex-1 flex-col items-center justify-center text-center text-gray-300 dark:text-gray-400" role="alert">
+        <fa-icon [icon]="iconError" class="text-4xl text-red-400 mb-4"></fa-icon>
+        <p class="mb-4">{{ 'project.error' | translate }}</p>
+        <button (click)="retry()" [attr.aria-label]="'project.retry' | translate"
+          class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 dark:bg-yellow-600 dark:hover:bg-yellow-600/80 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300">
+          <fa-icon [icon]="iconRetry"></fa-icon>
+          {{ 'project.retry' | translate }}
+        </button>
+      </div>
+    } @else if (projects().length === 0) {
+      <!-- Estado vacío -->
+      <div class="flex flex-1 flex-col items-center justify-center text-center text-gray-300 dark:text-gray-400">
+        <fa-icon [icon]="iconEmpty" class="text-4xl mb-4"></fa-icon>
+        <p>{{ 'project.empty' | translate }}</p>
+      </div>
+    } @else if (filteredProjects().length === 0) {
+      <!-- Sin resultados para el filtro -->
+      <div class="flex flex-1 flex-col items-center justify-center text-center text-gray-300 dark:text-gray-400">
+        <fa-icon [icon]="iconEmpty" class="text-4xl mb-4"></fa-icon>
+        <p>{{ 'project.empty' | translate }}</p>
+      </div>
+    } @else {
+      <!-- Grilla de proyectos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        @for (project of filteredProjects(); track project.title) {
+          <app-project-card [project]="project" [priority]="priorityTitles().has(project.title)"></app-project-card>
+        }
+      </div>
+    }
 
   </div>
 </div>

@@ -1,11 +1,11 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 import { faCheckCircle, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { ContactService } from './contact.service';
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import {
   emailFormatValidator,
@@ -24,9 +24,9 @@ declare global {
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ReactiveFormsModule, NgClass, FaIconComponent, TranslatePipe]
+  imports: [ReactiveFormsModule, NgClass, FaIconComponent, TranslatePipe, NgOptimizedImage]
 })
-export class ContactComponent implements AfterViewInit {
+export class ContactComponent {
   private readonly fb = inject(FormBuilder);
   private readonly toastr = inject(ToastrService);
   private readonly translate = inject(TranslateService);
@@ -47,53 +47,59 @@ export class ContactComponent implements AfterViewInit {
   readonly iconPlane = faPaperPlane;
   readonly iconSuccess = faCheckCircle;
 
+  readonly isVerifying = signal(false);
   readonly isSubmitting = signal(false);
   readonly isSubmitted = signal(false);
 
   private turnstileToken = '';
   private turnstileWidgetId: any;
 
-  ngAfterViewInit(): void {
-    this.initTurnstileWithRetry();
-  }
-
-  private initTurnstileWithRetry(attempt: number = 0): void {
-    const RETRY_DELAY = 500;
-
-    if (typeof window.turnstile === 'undefined') {
-      setTimeout(() => this.initTurnstileWithRetry(attempt + 1), RETRY_DELAY);
-      return;
-    }
-
-    this.renderTurnstile();
-  }
-
-  private renderTurnstile(): void {
-    const container = document.getElementById('turnstile-container');
-    if (!container) return;
-
-    if (this.turnstileWidgetId && window.turnstile) {
-      window.turnstile.remove(this.turnstileWidgetId);
-    }
-
-    this.turnstileWidgetId = window.turnstile.render(container, {
-      sitekey: '0x4AAAAAABialvmqysu6WBzx',
-      callback: (token: string) => {
-        this.turnstileToken = token;
-      }
-    });
-  }
-
   get nombre() { return this.contactForm.get('nombre')!; }
   get email() { return this.contactForm.get('email')!; }
   get mensaje() { return this.contactForm.get('mensaje')!; }
 
   onSubmit(): void {
-    if (this.contactForm.invalid || !this.turnstileToken) {
-      this.toastr.warning('Completa el captcha para continuar.');
+    if (this.contactForm.invalid || this.isVerifying() || this.isSubmitting()) {
       return;
     }
 
+    this.isVerifying.set(true);
+    this.initTurnstileWithRetry();
+  }
+
+  private initTurnstileWithRetry(attempt: number = 0): void {
+    const RETRY_DELAY = 150;
+    const MAX_ATTEMPTS = 40;
+
+    const container = document.getElementById('turnstile-container');
+
+    if (typeof window.turnstile === 'undefined' || !container) {
+      if (attempt >= MAX_ATTEMPTS) {
+        this.isVerifying.set(false);
+        this.toastr.error(
+          this.translate.instant('TOAST.ERROR_MESSAGE'),
+          this.translate.instant('TOAST.ERROR_TITLE')
+        );
+        return;
+      }
+      setTimeout(() => this.initTurnstileWithRetry(attempt + 1), RETRY_DELAY);
+      return;
+    }
+
+    this.renderTurnstile(container);
+  }
+
+  private renderTurnstile(container: HTMLElement): void {
+    this.turnstileWidgetId = window.turnstile.render(container, {
+      sitekey: '0x4AAAAAABialvmqysu6WBzx',
+      callback: (token: string) => {
+        this.turnstileToken = token;
+        this.sendMessage();
+      }
+    });
+  }
+
+  private sendMessage(): void {
     this.isSubmitting.set(true);
     this.isSubmitted.set(false);
 
@@ -107,6 +113,7 @@ export class ContactComponent implements AfterViewInit {
     this.contactService.enviarMensaje(datos).subscribe({
       next: () => {
         this.isSubmitting.set(false);
+        this.isVerifying.set(false);
         this.isSubmitted.set(true);
         this.toastr.success(
           this.translate.instant('TOAST.SUCCESS_MESSAGE'),
@@ -114,11 +121,12 @@ export class ContactComponent implements AfterViewInit {
         );
         setTimeout(() => this.isSubmitted.set(false), 3000);
         this.contactForm.reset();
-        this.turnstileToken = '';
-        window.turnstile.reset(this.turnstileWidgetId);
+        this.resetTurnstile();
       },
       error: (err) => {
         this.isSubmitting.set(false);
+        this.isVerifying.set(false);
+        this.resetTurnstile();
 
         if (err.status === 429) {
           this.toastr.warning(err?.error?.message || '⏳ Límite alcanzado', '¡Demasiadas solicitudes!');
@@ -131,5 +139,13 @@ export class ContactComponent implements AfterViewInit {
         );
       }
     });
+  }
+
+  private resetTurnstile(): void {
+    this.turnstileToken = '';
+    if (this.turnstileWidgetId && window.turnstile) {
+      window.turnstile.remove(this.turnstileWidgetId);
+    }
+    this.turnstileWidgetId = undefined;
   }
 }

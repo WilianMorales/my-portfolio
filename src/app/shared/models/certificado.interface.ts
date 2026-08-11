@@ -6,4 +6,5 @@ export interface Certificado {
   credencial: string;
   url: string;
   view: string;
+  badge?: string;
 }

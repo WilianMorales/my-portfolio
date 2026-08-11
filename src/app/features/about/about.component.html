@@ -1,5 +1,5 @@
-<div class="contenedor flex flex-col items-center justify-center max-auto mb-8 lg:min-h-screen">
-  <div class="flex flex-col items-center justify-center w-full lg:max-w-screen-lg lg:min-h-[calc(100vh-120px)]">
+<div class="contenedor flex flex-col items-center min-h-[calc(70vh-20px)] mb-16 xl:px-20 2xl:px-32">
+  <div class="flex flex-col items-center w-full lg:max-w-screen-lg">
     <!-- Título -->
     <h2
       class="text-4xl font-bold text-center text-gray-100 dark:text-yellow-500 mb-4 transition-colors flex items-center flex-wrap justify-center gap-2">
@@ -10,7 +10,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 mb-10 w-full items-start">
       <!-- Imagen -->
       <div class="flex justify-center">
-        <img ngSrc="assets/images/programming.svg" width="787" height="572" alt="Programming" class="w-full max-w-md h-auto object-contain">
+        <img ngSrc="assets/images/programming.svg" width="787" height="572" priority alt="Programming" class="w-full max-w-md h-auto object-contain">
       </div>
 
       <!-- Texto -->
@@ -47,8 +47,8 @@
     </div>
   </div>
 
-  <div class="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
-    <app-resumen />
+  <div class="flex flex-col items-center justify-center w-full">
+    <app-resumen class="w-full" />
   </div>
 
 </div>

@@ -1,0 +1,82 @@
+@if (isOpen()) {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="title()"
+    (click)="close()">
+
+    <div
+      class="relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white/15 shadow-2xl dark:bg-slate-800/70 animate-scaleIn"
+      (click)="$event.stopPropagation()">
+
+      <!-- Encabezado -->
+      <div class="flex items-center justify-between gap-4 border-b border-gray-200/30 p-5 dark:border-gray-700/30">
+        <h2 class="text-2xl font-extrabold text-white dark:text-yellow-500">
+          {{ title() }}
+        </h2>
+        <button
+          type="button"
+          (click)="close()"
+          [attr.aria-label]="'project.gallery.close' | translate"
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/90 border-gray-200 text-gray-600 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
+          <fa-icon [icon]="iconClose"></fa-icon>
+        </button>
+      </div>
+
+      <!-- Imagen principal -->
+      <div class="relative aspect-video w-full bg-gray-100/10 dark:bg-slate-900">
+        <img
+          [ngSrc]="currentImage() | noImage"
+          [alt]="'project.gallery.openAlt' | translate: { title: title() }"
+          appImgFallback
+          (appImgFallback)="onImageError(images()[currentIndex()])"
+          fill
+          priority
+          class="object-contain" />
+
+        @if (hasMultiple()) {
+          <button
+            type="button"
+            (click)="prev(); $event.stopPropagation()"
+            [attr.aria-label]="'project.gallery.previous' | translate"
+            class="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-lg transition-transform duration-200 hover:scale-110 dark:bg-slate-700/90 dark:text-gray-200">
+            <fa-icon [icon]="iconPrev"></fa-icon>
+          </button>
+          <button
+            type="button"
+            (click)="next(); $event.stopPropagation()"
+            [attr.aria-label]="'project.gallery.next' | translate"
+            class="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-lg transition-transform duration-200 hover:scale-110 dark:bg-slate-700/90 dark:text-gray-200">
+            <fa-icon [icon]="iconNext"></fa-icon>
+          </button>
+
+          <span
+            class="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white">
+            {{ 'project.gallery.counter' | translate: { current: currentIndex() + 1, total: images().length } }}
+          </span>
+        }
+      </div>
+
+      <!-- Miniaturas -->
+      @if (hasMultiple()) {
+        <div class="flex gap-3 overflow-x-auto border-t border-gray-200/30 p-4 dark:border-gray-700/30">
+          @for (img of images(); track img; let i = $index) {
+            <button
+              type="button"
+              (click)="selectImage(i); $event.stopPropagation()"
+              [attr.aria-label]="'project.gallery.thumbAlt' | translate: { index: i + 1, title: title() }"
+              [attr.aria-current]="i === currentIndex()"
+              class="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-colors duration-200"
+              [class.border-indigo-500]="i === currentIndex()"
+              [class.dark:border-yellow-500]="i === currentIndex()"
+              [class.border-transparent]="i !== currentIndex()"
+              [class.hover:border-gray-300]="i !== currentIndex()">
+              <img [ngSrc]="thumbSrc(img) | noImage" [alt]="'project.gallery.thumbAlt' | translate: { index: i + 1, title: title() }" appImgFallback (appImgFallback)="onImageError(img)" fill class="object-cover" />
+            </button>
+          }
+        </div>
+      }
+    </div>
+  </div>
+}
