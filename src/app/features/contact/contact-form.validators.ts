@@ -1,7 +1,8 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-export const NO_SQL_INJECTION_REGEX = /^(?!.*\b(script|select|insert|delete|update|drop|--|;)\b).*$/i;
+export const NO_SQL_INJECTION_REGEX =
+  /^(?!.*\b(script|select|insert|delete|update|drop|--|;)\b).*$/i;
 
 export function emailFormatValidator(control: AbstractControl): ValidationErrors | null {
   const email = control.value;

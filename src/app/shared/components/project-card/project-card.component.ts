@@ -16,7 +16,14 @@ import { ImageGalleryModalComponent } from '@app/shared/components/image-gallery
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FaIconComponent, NoImagePipe, NgOptimizedImage, TranslatePipe, ImageGalleryModalComponent, ImgFallbackDirective]
+  imports: [
+    FaIconComponent,
+    NoImagePipe,
+    NgOptimizedImage,
+    TranslatePipe,
+    ImageGalleryModalComponent,
+    ImgFallbackDirective
+  ]
 })
 export class ProjectCardComponent {
   private readonly translate = inject(TranslateService);
@@ -31,8 +38,12 @@ export class ProjectCardComponent {
 
   readonly isGalleryOpen = signal(false);
   readonly imageFailed = signal(false);
-  readonly isCodeProject = computed(() => this.project().type === 'backend' || this.project().type === 'fullstack');
-  readonly hasGallery = computed(() => !this.isCodeProject() && (this.project().images?.length ?? 0) > 1);
+  readonly isCodeProject = computed(
+    () => this.project().type === 'backend' || this.project().type === 'fullstack'
+  );
+  readonly hasGallery = computed(
+    () => !this.isCodeProject() && (this.project().images?.length ?? 0) > 1
+  );
   readonly cardImage = computed(() => (this.imageFailed() ? '' : this.project().image));
   readonly galleryImages = computed(() => {
     const project = this.project();

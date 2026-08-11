@@ -1,7 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
-import { faSun, faMoon, faBars, faTimes, faUser, faHome, faBriefcase, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSun,
+  faMoon,
+  faBars,
+  faTimes,
+  faUser,
+  faHome,
+  faBriefcase,
+  faCode,
+  faEnvelope
+} from '@fortawesome/free-solid-svg-icons';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';

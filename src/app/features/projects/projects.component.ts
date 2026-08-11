@@ -1,8 +1,25 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  computed,
+  inject,
+  signal
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Project, ProjectType } from '@app/shared/models/project.interface';
 import { HttpClient } from '@angular/common/http';
-import { faBriefcase, faTriangleExclamation, faSpinner, faFolderOpen, faRotateRight, faLayerGroup, faDesktop, faServer, faCubes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBriefcase,
+  faTriangleExclamation,
+  faSpinner,
+  faFolderOpen,
+  faRotateRight,
+  faLayerGroup,
+  faDesktop,
+  faServer,
+  faCubes
+} from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { ProjectCardComponent } from '@app/shared/components/project-card/project-card.component';
@@ -52,7 +69,14 @@ export class ProjectsComponent {
     return filter === 'all' ? projects : projects.filter(project => project.type === filter);
   });
 
-  readonly priorityTitles = computed(() => new Set(this.projects().slice(0, 4).map(project => project.title)));
+  readonly priorityTitles = computed(
+    () =>
+      new Set(
+        this.projects()
+          .slice(0, 4)
+          .map(project => project.title)
+      )
+  );
 
   constructor() {
     this.loadProjects();
@@ -67,7 +91,8 @@ export class ProjectsComponent {
   }
 
   filterClasses(filter: ProjectFilter): string {
-    const base = 'flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 whitespace-nowrap rounded-2xl sm:rounded-full h-14 w-16 sm:h-auto sm:w-auto sm:px-4 sm:py-2 font-semibold transition-all duration-300';
+    const base =
+      'flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 whitespace-nowrap rounded-2xl sm:rounded-full h-14 w-16 sm:h-auto sm:w-auto sm:px-4 sm:py-2 font-semibold transition-all duration-300';
 
     if (this.activeFilter() === filter) {
       return `${base} bg-indigo-600 dark:bg-yellow-600 text-white shadow-lg scale-105`;
@@ -80,13 +105,16 @@ export class ProjectsComponent {
     this.isLoading.set(true);
     this.hasError.set(false);
 
-    this.http.get<Project[]>('assets/data/projects.json').pipe(
-      catchError(() => {
-        this.hasError.set(true);
-        return of([] as Project[]);
-      }),
-      finalize(() => this.isLoading.set(false)),
-      takeUntilDestroyed(this.destroyRef)
-    ).subscribe(data => this.projects.set(data));
+    this.http
+      .get<Project[]>('assets/data/projects.json')
+      .pipe(
+        catchError(() => {
+          this.hasError.set(true);
+          return of([] as Project[]);
+        }),
+        finalize(() => this.isLoading.set(false)),
+        takeUntilDestroyed(this.destroyRef)
+      )
+      .subscribe(data => this.projects.set(data));
   }
 }

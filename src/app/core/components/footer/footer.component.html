@@ -1,8 +1,14 @@
-<footer class="w-full bg-white/5 dark:bg-black/30 text-center p-4 text-gray-300 text-sm md:text-base">
+<footer
+  class="w-full bg-white/5 p-4 text-center text-sm text-gray-300 dark:bg-black/30 md:text-base"
+>
   <div class="mx-auto">
     © {{ currentYear }} {{ 'footer.description' | translate }}
-    <a class="text-yellow-400 dark:text-yellow-500" href="https://github.com/WilianMorales" target="_blank">
-      <fa-icon [icon]="iconTerminal"/>{{ name }}
+    <a
+      class="text-yellow-400 dark:text-yellow-500"
+      href="https://github.com/WilianMorales"
+      target="_blank"
+    >
+      <fa-icon [icon]="iconTerminal" />{{ name }}
     </a>
   </div>
 </footer>

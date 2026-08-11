@@ -1,116 +1,168 @@
-<div class="flex flex-col items-center justify-center max-w-7xl mx-auto py-8">
+<div class="mx-auto flex max-w-7xl flex-col items-center justify-center py-8">
   <!-- Contenido principal -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
     <!-- Imagen + Texto (oculto en móviles) -->
-    <div class="flex flex-col items-start justify-center max-w-md mx-auto md:mx-0">
-      <img ngSrc="assets/images/contact.webp" width="752" height="534" alt="Contacto" priority class="w-full h-auto object-contain mb-4">
-      <p class="text-slate-400 dark:text-slate-300 text-base leading-relaxed">
+    <div class="mx-auto flex max-w-md flex-col items-start justify-center md:mx-0">
+      <img
+        ngSrc="assets/images/contact.webp"
+        width="752"
+        height="534"
+        alt="Contacto"
+        priority
+        class="mb-4 h-auto w-full object-contain"
+      />
+      <p class="text-base leading-relaxed text-slate-400 dark:text-slate-300">
         {{ 'contacto.descripcion' | translate }}
       </p>
     </div>
 
     <!-- Formulario -->
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
-      class="w-full p-6 bg-white/5 dark:bg-gray-800/30 text-white rounded-3xl shadow-xl border border-gray-700 backdrop-blur-md">
-
-      <h2 class="text-3xl lg:text-4xl font-bold text-center text-white dark:text-yellow-500 mb-2">
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="w-full rounded-3xl border border-gray-700 bg-white/5 p-6 text-white shadow-xl backdrop-blur-md dark:bg-gray-800/30"
+    >
+      <h2 class="mb-2 text-center text-3xl font-bold text-white dark:text-yellow-500 lg:text-4xl">
         {{ 'contacto.titulo' | translate }}
       </h2>
 
       <!-- Campo Nombre -->
       <div class="mb-2">
-        <label for="nombre" class="block text-sm font-semibold mb-1 text-gray-300">
+        <label for="nombre" class="mb-1 block text-sm font-semibold text-gray-300">
           {{ 'contacto.nombre' | translate }}
         </label>
-        <input id="nombre" type="text" formControlName="nombre"
-          class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
-          [placeholder]="'contacto.placeholder.NAME_PLACEHOLDER'| translate" />
-          <small class="block min-h-[1.10rem] text-xs mt-1 transition-all duration-300"
-              [ngClass]="{ 'text-red-400': nombre.invalid && (nombre.dirty || nombre.touched), 'invisible': !(nombre.invalid && (nombre.dirty || nombre.touched)) }">
-            {{ nombre.invalid && (nombre.dirty || nombre.touched) ? ('contacto.validacion.ERROR_NAME' | translate) : '' }}
-          </small>
+        <input
+          id="nombre"
+          type="text"
+          formControlName="nombre"
+          class="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+          [placeholder]="'contacto.placeholder.NAME_PLACEHOLDER' | translate"
+        />
+        <small
+          class="mt-1 block min-h-[1.10rem] text-xs transition-all duration-300"
+          [ngClass]="{
+            'text-red-400': nombre.invalid && (nombre.dirty || nombre.touched),
+            invisible: !(nombre.invalid && (nombre.dirty || nombre.touched))
+          }"
+        >
+          {{
+            nombre.invalid && (nombre.dirty || nombre.touched)
+              ? ('contacto.validacion.ERROR_NAME' | translate)
+              : ''
+          }}
+        </small>
       </div>
 
       <!-- Campo Email -->
       <div class="mb-2">
-        <label for="email" class="block text-sm font-semibold mb-1 text-gray-300">
+        <label for="email" class="mb-1 block text-sm font-semibold text-gray-300">
           {{ 'contacto.email' | translate }}
         </label>
-        <input id="email" type="email" formControlName="email"
-          class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
-          [placeholder]="'contacto.placeholder.EMAIL_PLACEHOLDER'| translate" />
-        <small class="block min-h-[1.10rem] text-xs mt-1 transition-all duration-300"
-            [ngClass]="{ 'text-red-400': email.invalid && (email.dirty || email.touched), 'invisible': !(email.invalid && (email.dirty || email.touched)) }">
-          {{ email.errors?.['emailInvalid'] ? ('contacto.validacion.ERROR_EMAIL.invalid' | translate) : '' }}
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          class="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+          [placeholder]="'contacto.placeholder.EMAIL_PLACEHOLDER' | translate"
+        />
+        <small
+          class="mt-1 block min-h-[1.10rem] text-xs transition-all duration-300"
+          [ngClass]="{
+            'text-red-400': email.invalid && (email.dirty || email.touched),
+            invisible: !(email.invalid && (email.dirty || email.touched))
+          }"
+        >
+          {{
+            email.errors?.['emailInvalid']
+              ? ('contacto.validacion.ERROR_EMAIL.invalid' | translate)
+              : ''
+          }}
         </small>
       </div>
 
       <!-- Campo Mensaje -->
       <div class="mb-5">
-        <label for="mensaje" class="block text-sm font-semibold mb-1 text-gray-300">{{ 'contacto.mensaje' | translate }}</label>
-        <textarea id="mensaje" rows="4" formControlName="mensaje"
-          class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
-          [placeholder]="'contacto.placeholder.MESSAGE_PLACEHOLDER'| translate"></textarea>
-          <div class="min-h-[1.10rem] transition-all duration-300">
-            @if (mensaje.errors && (mensaje.dirty || mensaje.touched)) {
-              @if (mensaje.errors['required']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.required' | translate }}
-                </small>
-              } @else if (mensaje.errors['whitespace']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.whitespace' | translate }}
-                </small>
-              } @else if (mensaje.errors['minLength']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.minlength' | translate }}
-                </small>
-              } @else if (mensaje.errors['maxLength']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.maxlength' | translate }}
-                </small>
-              } @else if (mensaje.errors['pattern']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.sqlInjection' | translate }}
-                </small>
-              } @else if (mensaje.errors['xss']) {
-                <small class="flex items-start text-xs text-red-400 space-x-1">
-                  {{ 'contacto.validacion.ERROR_MESSAGE.xss' | translate }}
-                </small>
-              }
+        <label for="mensaje" class="mb-1 block text-sm font-semibold text-gray-300">{{
+          'contacto.mensaje' | translate
+        }}</label>
+        <textarea
+          id="mensaje"
+          rows="4"
+          formControlName="mensaje"
+          class="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-yellow-500"
+          [placeholder]="'contacto.placeholder.MESSAGE_PLACEHOLDER' | translate"
+        ></textarea>
+        <div class="min-h-[1.10rem] transition-all duration-300">
+          @if (mensaje.errors && (mensaje.dirty || mensaje.touched)) {
+            @if (mensaje.errors['required']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.required' | translate }}
+              </small>
+            } @else if (mensaje.errors['whitespace']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.whitespace' | translate }}
+              </small>
+            } @else if (mensaje.errors['minLength']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.minlength' | translate }}
+              </small>
+            } @else if (mensaje.errors['maxLength']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.maxlength' | translate }}
+              </small>
+            } @else if (mensaje.errors['pattern']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.sqlInjection' | translate }}
+              </small>
+            } @else if (mensaje.errors['xss']) {
+              <small class="flex items-start space-x-1 text-xs text-red-400">
+                {{ 'contacto.validacion.ERROR_MESSAGE.xss' | translate }}
+              </small>
             }
-          </div>
+          }
+        </div>
       </div>
 
       @if (isVerifying()) {
         <!-- Estado de verificación -->
-        <div class="flex flex-col items-center justify-center gap-2 my-4 text-center text-gray-300 dark:text-gray-400" role="status" aria-live="polite">
+        <div
+          class="my-4 flex flex-col items-center justify-center gap-2 text-center text-gray-300 dark:text-gray-400"
+          role="status"
+          aria-live="polite"
+        >
           @if (!isSubmitting()) {
             <div id="turnstile-container" class="cf-turnstile"></div>
             <p class="text-sm font-medium">{{ 'contacto.verificando' | translate }}</p>
-            <p class="text-xs text-gray-400 dark:text-gray-500">{{ 'contacto.verificandoDesc' | translate }}</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500">
+              {{ 'contacto.verificandoDesc' | translate }}
+            </p>
           } @else {
-            <fa-icon [icon]="iconPlane" class="animate-fly text-2xl text-indigo-400 dark:text-yellow-500"></fa-icon>
+            <fa-icon
+              [icon]="iconPlane"
+              class="animate-fly text-2xl text-indigo-400 dark:text-yellow-500"
+            ></fa-icon>
             <p class="text-sm font-medium">{{ 'contacto.estadoMensaje.enviando' | translate }}</p>
           }
         </div>
       } @else {
         <!-- Botón Enviar -->
-        <button [disabled]="contactForm.invalid || isSubmitting()" type="submit"
-          class="bg-indigo-600 hover:bg-indigo-500 dark:bg-yellow-600 dark:hover:bg-yellow-600/80 text-slate-200 font-bold py-3 px-4 rounded-lg w-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+        <button
+          [disabled]="contactForm.invalid || isSubmitting()"
+          type="submit"
+          class="w-full rounded-lg bg-indigo-600 px-4 py-3 font-bold text-slate-200 transition-all duration-300 hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-yellow-600 dark:hover:bg-yellow-600/80"
+        >
           @if (!isSubmitting() && !isSubmitted()) {
             <fa-icon [icon]="iconPlane" class="mr-1"></fa-icon>
             {{ 'contacto.estadoMensaje.enviar' | translate }}
           } @else if (isSubmitting()) {
-            <fa-icon [icon]="iconPlane" class="animate-fly text-white mr-1"></fa-icon>
+            <fa-icon [icon]="iconPlane" class="mr-1 animate-fly text-white"></fa-icon>
             {{ 'contacto.estadoMensaje.enviando' | translate }}
           } @else if (isSubmitted()) {
-            <fa-icon [icon]="iconSuccess" class="text-green-500 animate-bounce mr-1"></fa-icon>
+            <fa-icon [icon]="iconSuccess" class="mr-1 animate-bounce text-green-500"></fa-icon>
             {{ 'contacto.estadoMensaje.enviado' | translate }}
           }
         </button>
       }
-
     </form>
   </div>
 </div>

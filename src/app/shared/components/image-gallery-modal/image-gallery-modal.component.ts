@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, HostListener, computed, effect, input, output, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  computed,
+  effect,
+  input,
+  output,
+  signal
+} from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -51,13 +60,13 @@ export class ImageGalleryModalComponent {
   next(): void {
     const total = this.images().length;
     if (total < 2) return;
-    this.currentIndex.update((i) => (i + 1) % total);
+    this.currentIndex.update(i => (i + 1) % total);
   }
 
   prev(): void {
     const total = this.images().length;
     if (total < 2) return;
-    this.currentIndex.update((i) => (i - 1 + total) % total);
+    this.currentIndex.update(i => (i - 1 + total) % total);
   }
 
   selectImage(index: number): void {
@@ -70,7 +79,7 @@ export class ImageGalleryModalComponent {
 
   onImageError(src: string): void {
     if (!src || this.failedImages().has(src)) return;
-    this.failedImages.update((set) => new Set(set).add(src));
+    this.failedImages.update(set => new Set(set).add(src));
   }
 
   @HostListener('document:keydown', ['$event'])

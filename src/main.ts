@@ -17,9 +17,9 @@ bootstrapApplication(AppComponent, {
       TranslateModule.forRoot({
         loader: provideTranslateHttpLoader({
           prefix: './assets/i18n/',
-          suffix: '.json',
+          suffix: '.json'
         }),
-        fallbackLang: 'en',
+        fallbackLang: 'en'
       }),
       ToastrModule.forRoot({
         positionClass: 'toast-top-right',
@@ -32,5 +32,4 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideAnimations()
   ]
-})
-  .catch(err => console.error(err));
+}).catch(err => console.error(err));

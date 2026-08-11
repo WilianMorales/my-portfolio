@@ -11,12 +11,22 @@ import {
   emailFormatValidator,
   minLengthTrimmedValidator,
   noWhitespaceValidator,
-  NO_SQL_INJECTION_REGEX,
+  NO_SQL_INJECTION_REGEX
 } from './contact-form.validators';
+
+interface TurnstileRenderOptions {
+  sitekey: string;
+  callback: (token: string) => void;
+}
+
+interface Turnstile {
+  render: (container: HTMLElement, options: TurnstileRenderOptions) => string;
+  remove: (widgetId: string) => void;
+}
 
 declare global {
   interface Window {
-    turnstile: any;
+    turnstile: Turnstile;
   }
 }
 
@@ -35,13 +45,16 @@ export class ContactComponent {
   readonly contactForm = this.fb.nonNullable.group({
     nombre: ['', Validators.required],
     email: ['', [Validators.required, Validators.email, emailFormatValidator]],
-    mensaje: ['', [
-      Validators.required,
-      minLengthTrimmedValidator(10),
-      Validators.maxLength(100),
-      noWhitespaceValidator,
-      Validators.pattern(NO_SQL_INJECTION_REGEX)
-    ]]
+    mensaje: [
+      '',
+      [
+        Validators.required,
+        minLengthTrimmedValidator(10),
+        Validators.maxLength(100),
+        noWhitespaceValidator,
+        Validators.pattern(NO_SQL_INJECTION_REGEX)
+      ]
+    ]
   });
 
   readonly iconPlane = faPaperPlane;
@@ -52,11 +65,17 @@ export class ContactComponent {
   readonly isSubmitted = signal(false);
 
   private turnstileToken = '';
-  private turnstileWidgetId: any;
+  private turnstileWidgetId?: string;
 
-  get nombre() { return this.contactForm.get('nombre')!; }
-  get email() { return this.contactForm.get('email')!; }
-  get mensaje() { return this.contactForm.get('mensaje')!; }
+  get nombre() {
+    return this.contactForm.get('nombre')!;
+  }
+  get email() {
+    return this.contactForm.get('email')!;
+  }
+  get mensaje() {
+    return this.contactForm.get('mensaje')!;
+  }
 
   onSubmit(): void {
     if (this.contactForm.invalid || this.isVerifying() || this.isSubmitting()) {
@@ -67,7 +86,7 @@ export class ContactComponent {
     this.initTurnstileWithRetry();
   }
 
-  private initTurnstileWithRetry(attempt: number = 0): void {
+  private initTurnstileWithRetry(attempt = 0): void {
     const RETRY_DELAY = 150;
     const MAX_ATTEMPTS = 40;
 
@@ -123,13 +142,16 @@ export class ContactComponent {
         this.contactForm.reset();
         this.resetTurnstile();
       },
-      error: (err) => {
+      error: err => {
         this.isSubmitting.set(false);
         this.isVerifying.set(false);
         this.resetTurnstile();
 
         if (err.status === 429) {
-          this.toastr.warning(err?.error?.message || '⏳ Límite alcanzado', '¡Demasiadas solicitudes!');
+          this.toastr.warning(
+            err?.error?.message || '⏳ Límite alcanzado',
+            '¡Demasiadas solicitudes!'
+          );
           return;
         }
 

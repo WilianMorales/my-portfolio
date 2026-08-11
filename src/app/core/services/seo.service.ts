@@ -18,10 +18,12 @@ export class SeoService {
   private readonly document = inject(DOCUMENT);
 
   init(): void {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      startWith(null)
-    ).subscribe(() => this.updateSeo());
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        startWith(null)
+      )
+      .subscribe(() => this.updateSeo());
 
     this.translate.onLangChange.subscribe(() => this.updateSeo());
   }
@@ -80,12 +82,15 @@ export class SeoService {
         name: 'Wilian Morales | Portfolio',
         url: SITE_URL
       },
-      about: seoKey === 'home' ? {
-        '@type': 'Person',
-        url: SITE_URL,
-        name: 'Wilian Morales',
-        jobTitle: 'Frontend & Web Developer',
-      } : undefined
+      about:
+        seoKey === 'home'
+          ? {
+              '@type': 'Person',
+              url: SITE_URL,
+              name: 'Wilian Morales',
+              jobTitle: 'Frontend & Web Developer'
+            }
+          : undefined
     });
     this.document.head.appendChild(script);
   }

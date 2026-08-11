@@ -1,50 +1,69 @@
-<div class="flex flex-col gap-4 w-full">
+<div class="flex w-full flex-col gap-4">
   <!-- Educación -->
-  <div class="flex flex-col w-full">
-    <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 my-4 md:text-center transition-colors">
+  <div class="flex w-full flex-col">
+    <h3
+      class="my-4 text-xl font-semibold text-gray-300 transition-colors dark:text-yellow-500 md:text-center"
+    >
       <fa-icon [icon]="iconStudy"></fa-icon> {{ 'resumen.educacion' | translate }}
     </h3>
-    @for (edu of ('education' | translate); track edu.titulo) {
-      <app-resumen-card [item]="edu" class="block w-full max-w-sm mx-auto"></app-resumen-card>
+    @for (edu of 'education' | translate; track edu.titulo) {
+      <app-resumen-card [item]="edu" class="mx-auto block w-full max-w-sm"></app-resumen-card>
     }
   </div>
 
   <!-- Experiencia -->
-  <div class="flex flex-col w-full">
-    <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 my-4 md:text-center transition-colors">
+  <div class="flex w-full flex-col">
+    <h3
+      class="my-4 text-xl font-semibold text-gray-300 transition-colors dark:text-yellow-500 md:text-center"
+    >
       <fa-icon [icon]="iconBusiness"></fa-icon> {{ 'resumen.experiencia' | translate }}
     </h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch w-full">
-      @for (job of ('work' | translate); track job.titulo) {
+    <div class="grid w-full grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      @for (job of 'work' | translate; track job.titulo) {
         <app-resumen-card [item]="job" class="flex flex-col"></app-resumen-card>
       }
     </div>
   </div>
 </div>
 
-<div class="flex flex-col mt-14 lg:mt-20 mb-8 w-full">
-  <h3 class="text-xl font-semibold text-gray-300 dark:text-yellow-500 flex items-center">
+<div class="mb-8 mt-14 flex w-full flex-col lg:mt-20">
+  <h3 class="flex items-center text-xl font-semibold text-gray-300 dark:text-yellow-500">
     <!-- ícono -->
-    <svg class="size-7 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="mr-3 size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="16" r="3" stroke="currentColor" stroke-width="1.5"></circle>
       <path
         d="M12 19.2599L9.73713 21.4293C9.41306 21.74 9.25102 21.8953 9.1138 21.9491C8.80111 22.0716 8.45425 21.9667 8.28977 21.7C8.21758 21.583 8.19509 21.3719 8.1501 20.9496C8.1247 20.7113 8.112 20.5921 8.07345 20.4922C7.98715 20.2687 7.80579 20.0948 7.57266 20.0121C7.46853 19.9751 7.3442 19.963 7.09553 19.9386C6.65512 19.8955 6.43491 19.8739 6.31283 19.8047C6.03463 19.647 5.92529 19.3145 6.05306 19.0147C6.10913 18.8832 6.27116 18.7278 6.59523 18.4171L8.07345 16.9999L9.1138 15.9596"
-        stroke="currentColor" stroke-width="1.5"></path>
+        stroke="currentColor"
+        stroke-width="1.5"
+      ></path>
       <path
         d="M12 19.2599L14.2629 21.4294C14.5869 21.7401 14.749 21.8954 14.8862 21.9492C15.1989 22.0717 15.5457 21.9668 15.7102 21.7001C15.7824 21.5831 15.8049 21.372 15.8499 20.9497C15.8753 20.7113 15.888 20.5921 15.9265 20.4923C16.0129 20.2688 16.1942 20.0949 16.4273 20.0122C16.5315 19.9752 16.6558 19.9631 16.9045 19.9387C17.3449 19.8956 17.5651 19.874 17.6872 19.8048C17.9654 19.6471 18.0747 19.3146 17.9469 19.0148C17.8909 18.8832 17.7288 18.7279 17.4048 18.4172L15.9265 17L15 16.0735"
-        stroke="currentColor" stroke-width="1.5"></path>
+        stroke="currentColor"
+        stroke-width="1.5"
+      ></path>
       <path
         d="M17.3197 17.9957C19.2921 17.9748 20.3915 17.8512 21.1213 17.1213C22 16.2426 22 14.8284 22 12V9M7 17.9983C4.82497 17.9862 3.64706 17.8897 2.87868 17.1213C2 16.2426 2 14.8284 2 12L2 8C2 5.17157 2 3.75736 2.87868 2.87868C3.75736 2 5.17157 2 8 2L16 2C18.8284 2 20.2426 2 21.1213 2.87868C21.6112 3.36857 21.828 4.02491 21.9239 5"
-        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      ></path>
       <path d="M9 6L15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-      <path d="M7 9.5H9M17 9.5H12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+      <path
+        d="M7 9.5H9M17 9.5H12.5"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      ></path>
     </svg>
     {{ 'certificado.titulo' | translate }}
   </h3>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 mt-6">
-    @for (cert of ('certificado.cursos' | translate); track cert.titulo) {
-      <app-cert-card [certificado]="cert" [viewCredText]="'certificado.viewCred' | translate"></app-cert-card>
+  <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    @for (cert of 'certificado.cursos' | translate; track cert.titulo) {
+      <app-cert-card
+        [certificado]="cert"
+        [viewCredText]="'certificado.viewCred' | translate"
+      ></app-cert-card>
     }
   </div>
 </div>

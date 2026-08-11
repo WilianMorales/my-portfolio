@@ -1,5 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { faCertificate, faBookOpen, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCertificate,
+  faBookOpen,
+  faArrowUpRightFromSquare
+} from '@fortawesome/free-solid-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { Certificado } from '@app/shared/models/certificado.interface';
 
@@ -19,8 +23,10 @@ export class CertCardComponent {
   private readonly certificationKeywords = ['certif'];
 
   readonly isCertification = computed(() =>
-    this.certificationKeywords.some(keyword => this.certificado().tipo.toLowerCase().includes(keyword))
+    this.certificationKeywords.some(keyword =>
+      this.certificado().tipo.toLowerCase().includes(keyword)
+    )
   );
 
-  readonly typeIcon = computed(() => this.isCertification() ? faCertificate : faBookOpen);
+  readonly typeIcon = computed(() => (this.isCertification() ? faCertificate : faBookOpen));
 }

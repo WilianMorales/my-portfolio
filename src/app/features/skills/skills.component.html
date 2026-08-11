@@ -1,35 +1,52 @@
-<div class="contenedor flex flex-col min-h-[calc(70vh-20px)] mb-16 px-4 xl:px-10 2xl:px-20">
-  <div class="flex flex-col items-center justify-center w-full">
+<div class="contenedor mb-16 flex min-h-[calc(70vh-20px)] flex-col px-4 xl:px-10 2xl:px-20">
+  <div class="flex w-full flex-col items-center justify-center">
     <!-- Título -->
-    <h1 class="text-3xl md:text-4xl font-bold text-center text-white dark:text-yellow-500 flex items-center justify-center flex-wrap gap-2 mb-8">
+    <h1
+      class="mb-8 flex flex-wrap items-center justify-center gap-2 text-center text-3xl font-bold text-white dark:text-yellow-500 md:text-4xl"
+    >
       <fa-icon [icon]="iconCode" class="text-4xl"></fa-icon>
       <span>{{ 'skills.title' | translate }}</span>
     </h1>
 
     <!-- Grid de categorías -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-screen-2xl">
+    <div class="grid w-full max-w-screen-2xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
       <!-- Categorías -->
       @for (categoria of skillsCategorias; track categoria.title) {
         <div class="flex flex-col items-center">
-          <h3 class="text-xl md:text-2xl font-bold text-center text-white dark:text-yellow-500 border-b-2 border-gray-400 dark:border-yellow-600 pb-2 w-full">
+          <h3
+            class="w-full border-b-2 border-gray-400 pb-2 text-center text-xl font-bold text-white dark:border-yellow-600 dark:text-yellow-500 md:text-2xl"
+          >
             {{ categoria.title }}
           </h3>
 
           <!-- Habilidades -->
-          <div class="grid grid-cols-3 gap-8 md:gap-4 mt-6 w-full justify-items-center">
+          <div class="mt-6 grid w-full grid-cols-3 justify-items-center gap-8 md:gap-4">
             @for (skill of categoria.skills; track skill.name) {
               <div class="flex flex-col items-center">
-                <div class="bg-white/5 dark:bg-slate-800/60 p-2 rounded-xl shadow-md flex flex-col items-center justify-center w-[95px] h-[100px] hover:scale-105 transition-transform duration-300">
+                <div
+                  class="flex h-[100px] w-[95px] flex-col items-center justify-center rounded-xl bg-white/5 p-2 shadow-md transition-transform duration-300 hover:scale-105 dark:bg-slate-800/60"
+                >
                   @if (skill.img) {
-                    <img [ngSrc]="skill.img" width="40" height="40" [alt]="skill.name" class="w-10 h-10 object-contain shrink-0">
+                    <img
+                      [ngSrc]="skill.img"
+                      width="40"
+                      height="40"
+                      [alt]="skill.name"
+                      class="h-10 w-10 shrink-0 object-contain"
+                    />
                   } @else if (skill.icon) {
-                    <fa-icon [icon]="skill.icon" [ngClass]="skill.color" class="text-4xl shrink-0"></fa-icon>
+                    <fa-icon
+                      [icon]="skill.icon"
+                      [ngClass]="skill.color"
+                      class="shrink-0 text-4xl"
+                    ></fa-icon>
                   }
-                  <p class="mt-2 text-center text-gray-800 dark:text-gray-200 font-medium w-full"
-                    [ngClass]="skill.wrapName
-                      ? 'text-sm leading-4 whitespace-normal'
-                      : 'text-sm truncate'
-                  ">
+                  <p
+                    class="mt-2 w-full text-center font-medium text-gray-800 dark:text-gray-200"
+                    [ngClass]="
+                      skill.wrapName ? 'whitespace-normal text-sm leading-4' : 'truncate text-sm'
+                    "
+                  >
                     {{ skill.name }}
                   </p>
                 </div>

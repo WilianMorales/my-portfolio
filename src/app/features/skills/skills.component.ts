@@ -1,6 +1,20 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faAngular, faHtml5, faCss3Alt, faNodeJs, faGithub, faJsSquare, faBootstrap, faTrello, faGitAlt, faSass, faBitbucket, faWordpress, faReact } from '@fortawesome/free-brands-svg-icons';
+import {
+  faAngular,
+  faHtml5,
+  faCss3Alt,
+  faNodeJs,
+  faGithub,
+  faJsSquare,
+  faBootstrap,
+  faTrello,
+  faGitAlt,
+  faSass,
+  faBitbucket,
+  faWordpress,
+  faReact
+} from '@fortawesome/free-brands-svg-icons';
 import { faCode, faServer } from '@fortawesome/free-solid-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { NgClass, NgOptimizedImage } from '@angular/common';
@@ -20,11 +34,11 @@ export interface SkillCategory {
 }
 
 @Component({
-    selector: 'app-skills',
-    templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FaIconComponent, NgClass, TranslatePipe, NgOptimizedImage]
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FaIconComponent, NgClass, TranslatePipe, NgOptimizedImage]
 })
 export class SkillsComponent {
   readonly iconCode = faCode;
@@ -83,5 +97,4 @@ export class SkillsComponent {
       ]
     }
   ];
-
 }

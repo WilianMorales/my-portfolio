@@ -16,5 +16,4 @@ export class AboutComponent {
   readonly iconFileDown = faFileArrowDown;
   readonly iconLaptop = faLaptop;
   readonly iconUser = faUser;
-
 }

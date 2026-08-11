@@ -1,31 +1,41 @@
-<div class="bg-white/10 dark:bg-slate-800/60 shadow-lg rounded-lg p-6 w-full h-full flex flex-col">
-  <div class="flex items-start w-full">
-    <div class="flex flex-col items-center shrink-0">
-      <img [src]="item().logo" alt="Logo" class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover">
+<div class="flex h-full w-full flex-col rounded-lg bg-white/10 p-6 shadow-lg dark:bg-slate-800/60">
+  <div class="flex w-full items-start">
+    <div class="flex shrink-0 flex-col items-center">
+      <img
+        [src]="item().logo"
+        alt="Logo"
+        class="h-14 w-14 rounded-full object-cover md:h-16 md:w-16"
+      />
       @if (item().tipo) {
-        <span class="md:hidden mt-1.5 text-xs font-medium bg-white/80 text-zinc-900 px-2 py-1 rounded-full whitespace-nowrap">
+        <span
+          class="mt-1.5 whitespace-nowrap rounded-full bg-white/80 px-2 py-1 text-xs font-medium text-zinc-900 md:hidden"
+        >
           {{ item().tipo }}
         </span>
       }
     </div>
     <div class="ml-4 min-w-0 flex-1">
-      <div class="flex items-center justify-between gap-2 w-full">
-        <h3 class="text-sm lg:text-base font-semibold text-gray-300 dark:text-yellow-500 flex items-start whitespace-nowrap">
+      <div class="flex w-full items-center justify-between gap-2">
+        <h3
+          class="flex items-start whitespace-nowrap text-sm font-semibold text-gray-300 dark:text-yellow-500 lg:text-base"
+        >
           {{ item().titulo }}
         </h3>
         @if (item().tipo) {
-          <span class="hidden md:inline-flex shrink-0 text-xs font-medium bg-white/80 text-zinc-900 px-2 py-1 rounded-full whitespace-nowrap">
+          <span
+            class="hidden shrink-0 whitespace-nowrap rounded-full bg-white/80 px-2 py-1 text-xs font-medium text-zinc-900 md:inline-flex"
+          >
             {{ item().tipo }}
           </span>
         }
       </div>
 
-      <p class="text-sm md:text-base font-medium text-gray-400 truncate">
+      <p class="truncate text-sm font-medium text-gray-400 md:text-base">
         {{ item().lugar }}
       </p>
-      <span class="text-xs md:text-sm text-gray-400">{{ item().fecha }}</span>
+      <span class="text-xs text-gray-400 md:text-sm">{{ item().fecha }}</span>
       @if (item().ciudad) {
-        <p class="mt-0.5 text-xs md:text-sm text-slate-300">{{ item().ciudad }}</p>
+        <p class="mt-0.5 text-xs text-slate-300 md:text-sm">{{ item().ciudad }}</p>
       }
     </div>
   </div>
