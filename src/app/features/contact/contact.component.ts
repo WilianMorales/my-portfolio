@@ -83,7 +83,23 @@ export class ContactComponent {
     }
 
     this.isVerifying.set(true);
+    this.loadTurnstileScript();
     this.initTurnstileWithRetry();
+  }
+
+  private loadTurnstileScript(): void {
+    const SCRIPT_ID = 'cf-turnstile-script';
+
+    if (document.getElementById(SCRIPT_ID)) {
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
   }
 
   private initTurnstileWithRetry(attempt = 0): void {
