@@ -42,6 +42,12 @@
       "en": "Website for a tourist farm designed to manage booking history and reserve lodging and events."
     },
     "image": "assets/images/portfolio/fundocaminoreal.webp",
+    "images": [
+      "assets/images/portfolio/fundocaminoreal.webp",
+      "assets/images/portfolio/views/fundocaminoreal-1.webp",
+      "assets/images/portfolio/views/fundocaminoreal-2.webp",
+      "assets/images/portfolio/views/fundocaminoreal-3.webp"
+    ],
     "type": "frontend",
     "technologies": [
       "Angular 19",
