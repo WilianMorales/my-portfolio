@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NgOptimizedImage } from '@angular/common';
-import { faExpand, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faExpand, faFolder, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { NoImagePipe } from '@app/shared/pipes/no-image.pipe';
@@ -24,13 +24,15 @@ export class ProjectCardComponent {
   readonly iconLink = faLink;
   readonly iconGitHub = faGithubAlt;
   readonly iconExpand = faExpand;
+  readonly iconFolder = faFolder;
 
   readonly project = input.required<Project>();
   readonly priority = input(false);
 
   readonly isGalleryOpen = signal(false);
   readonly imageFailed = signal(false);
-  readonly hasGallery = computed(() => (this.project().images?.length ?? 0) > 1);
+  readonly isCodeProject = computed(() => this.project().type === 'backend' || this.project().type === 'fullstack');
+  readonly hasGallery = computed(() => !this.isCodeProject() && (this.project().images?.length ?? 0) > 1);
   readonly cardImage = computed(() => (this.imageFailed() ? '' : this.project().image));
   readonly galleryImages = computed(() => {
     const project = this.project();

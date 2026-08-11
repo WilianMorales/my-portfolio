@@ -7,25 +7,25 @@
     (click)="close()">
 
     <div
-      class="relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-slate-800 animate-scaleIn"
+      class="relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white/15 shadow-2xl dark:bg-slate-800/70 animate-scaleIn"
       (click)="$event.stopPropagation()">
 
       <!-- Encabezado -->
-      <div class="flex items-center justify-between gap-4 border-b border-gray-200 p-5 dark:border-gray-700">
-        <h2 class="text-xl font-bold text-gray-800 dark:text-white">
+      <div class="flex items-center justify-between gap-4 border-b border-gray-200/30 p-5 dark:border-gray-700/30">
+        <h2 class="text-2xl font-extrabold text-white dark:text-yellow-500">
           {{ title() }}
         </h2>
         <button
           type="button"
           (click)="close()"
           [attr.aria-label]="'project.gallery.close' | translate"
-          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/90 border-gray-200 text-gray-600 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
           <fa-icon [icon]="iconClose"></fa-icon>
         </button>
       </div>
 
       <!-- Imagen principal -->
-      <div class="relative aspect-video w-full bg-gray-100 dark:bg-slate-900">
+      <div class="relative aspect-video w-full bg-gray-100/10 dark:bg-slate-900">
         <img
           [ngSrc]="currentImage() | noImage"
           [alt]="'project.gallery.openAlt' | translate: { title: title() }"
@@ -60,7 +60,7 @@
 
       <!-- Miniaturas -->
       @if (hasMultiple()) {
-        <div class="flex gap-3 overflow-x-auto border-t border-gray-200 p-4 dark:border-gray-700">
+        <div class="flex gap-3 overflow-x-auto border-t border-gray-200/30 p-4 dark:border-gray-700/30">
           @for (img of images(); track img; let i = $index) {
             <button
               type="button"
