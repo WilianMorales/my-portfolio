@@ -12,7 +12,7 @@
     <!-- Logo o título (oculto en móviles) -->
     <div class="hidden lg:flex">
       <h2 class="font-thin tracking-widest text-2xl text-gray-100 dark:text-yellow-400">Mora<span
-          class="underline decoration-yellow-400 decoration-4 dark:decoration-gray-100">Dev</span>
+          class="underline decoration-indigo-500 decoration-4 dark:decoration-gray-100">Dev</span>
       </h2>
     </div>
 
@@ -20,7 +20,7 @@
     <div class="hidden lg:flex flex-row text-center space-x-16">
       @for (link of menuLinks; track link.path) {
         <a [routerLink]="link.path" [attr.aria-label]="link.labelKey | translate"
-          class="text-2xl md:text-3xl transition-all duration-300" [ngClass]="{'text-yellow-400': isActive(link.path)}">
+          class="text-2xl md:text-3xl transition-all duration-300" [ngClass]="{'text-indigo-500 dark:text-yellow-400': isActive(link.path)}">
           <fa-icon [icon]="link.icon"></fa-icon>
         </a>
       }
@@ -71,7 +71,7 @@
 
   @for (link of menuLinks; track link.path) {
     <a [routerLink]="link.path" [attr.aria-label]="link.labelKey | translate" class="text-3xl transition-all duration-300"
-      [ngClass]="{'text-yellow-400': isActive(link.path)}">
+      [ngClass]="{'text-indigo-500 dark:text-yellow-400': isActive(link.path)}">
       <fa-icon [icon]="link.icon"></fa-icon>
     </a>
   }

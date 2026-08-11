@@ -21,12 +21,24 @@
       <!-- Enlaces -->
       <div class="mt-6 flex flex-wrap justify-center gap-6">
         <a href="https://github.com/WilianMorales" target="_blank"
-          class="text-white dark:text-yellow-500 hover:text-yellow-500 dark:hover:text-gray-300 flex items-center space-x-2 transition-colors">
-          <fa-icon [icon]="iconGithub" class="mr-1"></fa-icon> GitHub
+          class="group/social relative text-white dark:text-yellow-500 hover:text-indigo-600 dark:hover:text-gray-300 flex items-center space-x-2 transition-colors">
+          <fa-icon [icon]="iconGithub" class="mr-1"></fa-icon>
+          <span class="relative">
+            GitHub
+            <span
+              class="absolute left-0 -bottom-0.5 h-[2px] w-full bg-indigo-600 dark:bg-gray-300 origin-left scale-x-0 group-hover/social:scale-x-100 transition-transform duration-300 ease-out"
+              aria-hidden="true"></span>
+          </span>
         </a>
         <a href="https://linkedin.com/in/wilian-moralesch" target="_blank"
-          class="text-white dark:text-yellow-500 hover:text-yellow-500 dark:hover:text-gray-300 flex items-center space-x-2 transition-colors">
-          <fa-icon [icon]="iconLinkedin" class="mr-1"></fa-icon> LinkedIn
+          class="group/social relative text-white dark:text-yellow-500 hover:text-indigo-600 dark:hover:text-gray-300 flex items-center space-x-2 transition-colors">
+          <fa-icon [icon]="iconLinkedin" class="mr-1"></fa-icon>
+          <span class="relative">
+            LinkedIn
+            <span
+              class="absolute left-0 -bottom-0.5 h-[2px] w-full bg-indigo-600 dark:bg-gray-300 origin-left scale-x-0 group-hover/social:scale-x-100 transition-transform duration-300 ease-out"
+              aria-hidden="true"></span>
+          </span>
         </a>
       </div>
     </div>

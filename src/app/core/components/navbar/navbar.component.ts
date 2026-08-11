@@ -40,7 +40,7 @@ export class NavbarComponent {
   ];
 
   readonly idioma = signal(localStorage.getItem('idioma') || 'es');
-  readonly esModoOscuro = signal(localStorage.getItem('modoOscuro') === 'true');
+  readonly esModoOscuro = signal(localStorage.getItem('modoOscuro') !== 'false');
   readonly menuAbierto = signal(false);
 
   private readonly currentUrl = toSignal(
