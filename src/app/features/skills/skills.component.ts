@@ -8,7 +8,6 @@ import {
   faGithub,
   faJsSquare,
   faBootstrap,
-  faTrello,
   faGitAlt,
   faSass,
   faBitbucket,
@@ -86,11 +85,11 @@ export class SkillsComponent {
       title: 'Tools & Methodologies',
       skills: [
         { name: 'VS Code', img: 'assets/images/skill/vscode.svg' },
+        { name: 'Cursor', img: 'assets/images/skill/cursor.svg' },
         { name: 'Postman', img: 'assets/images/skill/postman.svg' },
         { name: 'Bruno', img: 'assets/images/skill/bruno.webp' },
         { name: 'Figma', img: 'assets/images/skill/figma.svg' },
         { name: 'Jira', img: 'assets/images/skill/jira.svg' },
-        { name: 'Trello', icon: faTrello, color: 'text-blue-400' },
         { name: 'Power Automate', img: 'assets/images/skill/power-automate.webp', wrapName: true },
         { name: 'Scrum', img: 'assets/images/skill/scrum.webp' },
         { name: 'WordPress', icon: faWordpress, color: 'text-white' }
