@@ -54,9 +54,14 @@ ng serve --host IP_DE_TU_RED
 ## 🧪 Scripts disponibles
 
 ```bash
-npm start           # ng serve
-npm run build       # ng build
-npm run build:prod  # ng build --configuration production --base-href /my-portfolio/
+npm start              # ng serve
+npm run build          # ng build
+npm run build:prod     # ng build --configuration production --base-href /my-portfolio/
+npm run test           # vitest run
+npm run test:watch     # vitest (modo watch)
+npm run test:coverage  # vitest run --coverage
+npm run lint           # ng lint
+npm run format         # prettier --write
 ```
 
 ## 🚢 Despliegue
@@ -84,6 +89,11 @@ npm install @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @
 * angular-cli-ghpages
 ```
 ng add angular-cli-ghpages
+```
+* ESLint y Prettier
+```
+ng add @angular-eslint/schematics
+npm install -D prettier eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss
 ```
 
 > [!NOTE]
